@@ -1,65 +1,84 @@
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
+import re
 
 def scrape():
-    # 這是東方馬經新聞選單真實存在的內部網址
-    # 我們嘗試兩個可能的路徑，確保萬無一失
-    urls = [
-        "https://racing.on.cc/racing/new/curr/index.html",
-        "https://racing.on.cc/racing/new/lastwin/index.html"
-    ]
+    # 這是東方馬經「選單與內容」真正存在的後端網址
+    # 根據以往經驗與截圖結構，這個網址最有可能包含 rac_news_selection
+    target_url = "https://racing.on.cc/racing/new/curr/index.html"
     
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'Referer': 'https://racing.on.cc/news.html'
     }
     
-    extracted_data = []
-    seen_titles = set()
+    print(f"--- 嘗試存取東方馬經數據源: {target_url} ---")
     
-    # 取得今天與昨天的日期字串 (格式: 20260201)
-    today_str = datetime.now().strftime("%Y%m%d")
-    yesterday_str = (datetime.now() - timedelta(days=1)).strftime("%Y%m%d")
-    target_dates = [today_str, yesterday_str]
+    try:
+        res = requests.get(target_url, headers=headers, timeout=10)
+        # 東方馬經是老牌網站，使用 Big5 (cp950) 編碼
+        res.encoding = 'cp950' 
+        
+        if res.status_code != 200:
+            print(f"東方馬經請求失敗，代碼: {res.status_code}")
+            return []
 
-    for url in urls:
-        try:
-            print(f"嘗試抓取東方選單: {url}")
-            res = requests.get(url, headers=headers)
-            res.encoding = 'cp950' # 東方網頁使用 Big5 編碼
-            
-            if res.status_code != 200:
-                continue
+        soup = BeautifulSoup(res.text, 'html.parser')
+        extracted_data = []
+        
+        # 1. 建立目標日期字串（對應截圖中的 optgroup label "1/2/2026"）
+        now = datetime.now()
+        yesterday = now - timedelta(days=1)
+        
+        # 格式：D/M/YYYY (例如 1/2/2026)
+        date_formats = [
+            f"{now.day}/{now.month}/{now.year}",
+            f"{yesterday.day}/{yesterday.month}/{yesterday.year}"
+        ]
+        print(f"尋找日期標籤: {date_formats}")
 
-            soup = BeautifulSoup(res.text, 'html.parser')
-            
-            # 尋找類別為 rac_news_selection 的 select
-            select_tag = soup.find('select', class_='rac_news_selection')
-            
-            # 如果找不到特定的 select，就抓取頁面上所有的 option
-            options = select_tag.find_all('option') if select_tag else soup.find_all('option')
-            
-            for opt in options:
-                val = opt.get('value', '')
-                title = opt.get_text(strip=True)
+        # 2. 尋找目標 select
+        select_tag = soup.find('select', class_='rac_news_selection')
+        
+        if not select_tag:
+            # 如果找不到 select，嘗試直接找 optgroup
+            optgroups = soup.find_all('optgroup')
+        else:
+            optgroups = select_tag.find_all('optgroup')
+
+        for group in optgroups:
+            label = group.get('label', '')
+            # 檢查 label 是否匹配今天或昨天的日期 (如 "1/2/2026")
+            if any(fmt in label for fmt in date_formats):
+                options = group.find_all('option')
+                print(f"在日期 {label} 下找到 {len(options)} 則新聞")
                 
-                # 判斷日期 (value 內包含日期字串)
-                if any(date in val for date in target_dates):
-                    if title and "請選擇" not in title and title not in seen_titles:
-                        seen_titles.add(title)
+                for opt in options:
+                    title = opt.get_text(strip=True)
+                    # 排除掉預設的提示文字
+                    if title and "請選擇" not in title:
                         extracted_data.append({
                             "title": f"[東方] {title}",
                             "link": "https://racing.on.cc/news.html",
-                            "time": datetime.now().strftime("%Y-%m-%d") # 東方選單無細分小時，標註今日
+                            "time": label
                         })
-            
-            # 如果在這個 URL 抓到了東西，就不用跑下一個 URL 了
-            if extracted_data:
-                break
+        
+        # 3. 備援方案：如果 optgroup 沒抓到，抓取所有 option 看看
+        if not extracted_data:
+            print("嘗試備援方案：抓取所有 option...")
+            all_options = soup.find_all('option')
+            for opt in all_options:
+                title = opt.get_text(strip=True)
+                if len(title) > 5 and "請選擇" not in title:
+                    extracted_data.append({
+                        "title": f"[東方-備援] {title}",
+                        "link": "https://racing.on.cc/news.html",
+                        "time": now.strftime("%Y-%m-%d")
+                    })
 
-        except Exception as e:
-            print(f"抓取 {url} 時發生錯誤: {e}")
+        return extracted_data
 
-    if extracted_data:
-        print(f"成功從東方馬經選單抓取 {len(extracted_data)} 則標題")
-    return extracted_data
+    except Exception as e:
+        print(f"東方馬經執行失敗: {e}")
+        return []
