@@ -1,91 +1,71 @@
 import requests
-from bs4 import BeautifulSoup
-from datetime import datetime, timedelta
 import re
+import urllib.parse
+import warnings
+from bs4 import XMLParsedAsHTMLWarning
 
-def parse_japanese_time(time_str):
-    """
-    處理日文相對時間：'12分前', '5時間前', '1日前'
-    """
-    now = datetime.now()
-    # 提取數字
-    number_match = re.search(r'\d+', time_str)
-    if not number_match:
-        return now
-    
-    n = int(number_match.group())
-    
-    if '分前' in time_str:
-        return now - timedelta(minutes=n)
-    elif '時間前' in time_str:
-        return now - timedelta(hours=n)
-    elif '日前' in time_str:
-        return now - timedelta(days=n)
-    
-    return now
+# 忽略警告
+warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
 def scrape():
-    # Netkeiba 新聞清單頁面
-    news_url = "https://news.netkeiba.com/?pid=news_list&type=a"
-    base_url = "https://news.netkeiba.com"
+    # 策略：直接在 Google 搜尋指令中指定要 news_view 網址
+    # site:news.netkeiba.com 只找這網站
+    # inurl:news_view 網址必須包含這個關鍵字 (確保是新聞內文)
+    search_query = "site:news.netkeiba.com inurl:news_view"
+    encoded_query = urllib.parse.quote(search_query)
+    
+    # 搜尋過去 36 小時的新聞
+    rss_url = f"https://news.google.com/rss/search?q={encoded_query}+when:36h&hl=ja&gl=JP&ceid=JP:ja"
     
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
     }
     
-    print(f"--- 啟動 Netkeiba 日本新聞抓取 ---")
+    print(f"--- 啟動 Google 代理模式 (Netkeiba 指令優化) ---")
     
     try:
-        res = requests.get(news_url, headers=headers, timeout=15)
-        # Netkeiba 有時使用 EUC-JP，讓 requests 自動偵測編碼防止亂碼
-        res.encoding = res.apparent_encoding
+        res = requests.get(rss_url, headers=headers, timeout=15)
         
-        if res.status_code != 200:
-            print(f"    ❌ Netkeiba 請求失敗: {res.status_code}")
-            return []
+        # 使用 Regex 切割 <item>，這最穩定
+        items = re.findall(r'<item>(.*?)</item>', res.text, re.DOTALL)
+        print(f"    [Debug] 原始項目總數: {len(items)}")
 
-        soup = BeautifulSoup(res.text, 'html.parser')
         extracted_data = []
-        
-        # 設定 36 小時門檻 (或視需求調整)
-        threshold = datetime.now() - timedelta(hours=36)
+        seen_links = set()
 
-        # 根據截圖，新聞項目在 a.ArticleLink 中
-        # 我們抓取所有帶有 ArticleLink 類別的 a 標籤
-        articles = soup.select('a.ArticleLink')
-        print(f"    找到 {len(articles)} 個新聞連結，開始解析日文時間...")
+        # 過濾關鍵字黑名單
+        blacklist = ['検索結果', 'コラム検索', 'のニュース', 'のコラム', '一覧']
 
-        for art in articles:
-            # 1. 抓取標題 (在 class="NewsTitle" 內)
-            title_node = art.select_one('.NewsTitle')
-            if not title_node:
-                continue
-            title = title_node.get_text(strip=True)
-            
-            # 2. 抓取連結
-            link = art.get('href', '')
-            if link.startswith('//'):
-                link = 'https:' + link
-            elif link.startswith('/'):
-                link = base_url + link
+        for item_content in items:
+            title_match = re.search(r'<title>(.*?)</title>', item_content)
+            link_match = re.search(r'<link>(.*?)</link>', item_content)
+            date_match = re.search(r'<pubDate>(.*?)</pubDate>', item_content)
+
+            if title_match and link_match:
+                raw_title = title_match.group(1)
+                # 移除 Google 自動加上的來源尾綴
+                title = raw_title.split(' - ')[0] if ' - ' in raw_title else raw_title
+                link = link_match.group(1)
+                pub_date = date_match.group(1) if date_match else ""
+
+                # 核心過濾邏輯：
+                # 1. 標題不能包含黑名單關鍵字
+                # 2. 標題長度必須大於 12 個字元 (排除純馬名、純地名)
+                # 3. 不再檢查 link 內容，因為 Google 已經幫我們過濾好了
                 
-            # 3. 抓取時間 (在 class="NewsData" 內，可能包含 12分前)
-            time_node = art.select_one('.NewsData')
-            time_text = time_node.get_text(strip=True) if time_node else ""
-            
-            # 4. 處理時間與過濾
-            pub_date = parse_japanese_time(time_text)
-            
-            if pub_date >= threshold:
-                extracted_data.append({
-                    "title": title,
-                    "link": link,
-                    "time": pub_date.strftime("%Y-%m-%d %H:%M") + f" ({time_text})"
-                })
+                if not any(word in title for word in blacklist):
+                    if len(title) > 12:
+                        if link not in seen_links:
+                            seen_links.add(link)
+                            extracted_data.append({
+                                "title": title.strip(),
+                                "link": link.strip(),
+                                "time": pub_date
+                            })
 
-        print(f"    ✅ Netkeiba 抓取完成，符合時間內的新聞共 {len(extracted_data)} 則")
+        print(f"    ✅ 過濾完成，精確新聞共 {len(extracted_data)} 則")
         return extracted_data
 
     except Exception as e:
-        print(f"    ❌ Netkeiba 執行錯誤: {e}")
+        print(f"    ❌ 代理模式執行錯誤: {e}")
         return []
