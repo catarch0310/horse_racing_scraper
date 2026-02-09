@@ -10,6 +10,7 @@ SCRAPER_SITES = [
     'scmp_racing',
     'on_cc_racing',
     'punters_au'
+    'netkeiba_news'
 ]
 
 def run_all():
