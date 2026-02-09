@@ -9,7 +9,7 @@ SCRAPER_SITES = [
     'racing_post',
     'scmp_racing',
     'on_cc_racing',
-    'punters_au'
+    'punters_au',
     'netkeiba_news'
 ]
 
