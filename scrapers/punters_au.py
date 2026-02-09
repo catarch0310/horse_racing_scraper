@@ -5,10 +5,9 @@ import re
 
 def parse_relative_time(time_str):
     now = datetime.now()
-    time_str = time_str.lower().strip()
-    number = re.search(r'\d+', time_str)
-    if not number: return now
-    n = int(number.group())
+    num = re.search(r'\d+', time_str)
+    if not num: return now
+    n = int(num.group())
     if 'hour' in time_str: return now - timedelta(hours=n)
     if 'day' in time_str: return now - timedelta(days=n)
     return now
@@ -16,34 +15,41 @@ def parse_relative_time(time_str):
 def scrape():
     base_url = "https://www.punters.com.au"
     news_url = "https://www.punters.com.au/news/latest-news/"
-    # 設定 36 小時門檻
     threshold = datetime.now() - timedelta(hours=36)
     
+    # 使用更完整的 Headers
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,arm64e/v1,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Referer': 'https://www.google.com/',
+        'Cache-Control': 'no-cache'
     }
     
-    print(f"--- 啟動 Punters.com.au 簡單抓取 (第一頁) ---")
+    print(f"--- 啟動 Punters.com.au 穩定抓取 ---")
     
     try:
-        res = requests.get(news_url, headers=headers, timeout=15)
+        session = requests.Session()
+        res = session.get(news_url, headers=headers, timeout=20)
+        
         if res.status_code != 200:
-            print(f"Punters 請求失敗: {res.status_code}")
+            print(f"   ❌ Punters 被阻擋，狀態碼: {res.status_code}")
             return []
 
         soup = BeautifulSoup(res.text, 'html.parser')
-        # 標題與連結通常在帶有 news-tile 類別的 a 標籤或 div 內
-        articles = soup.select('a.news-tile')
+        # 改用更寬鬆的 CSS 選擇器，尋找任何包含標題與連結的 a 標籤
+        articles = soup.find_all('a', class_=re.compile(r'news-tile'))
         extracted_data = []
 
         for art in articles:
-            title_node = art.select_one('.news-tile__title')
+            # 尋找標題文字
+            title_node = art.find(['p', 'span', 'h3'], class_=re.compile(r'title'))
+            # 尋找時間文字
             time_node = art.find(string=re.compile(r'ago'))
             
             if title_node and time_node:
                 title = title_node.get_text(strip=True)
-                time_text = time_node.strip()
-                pub_date = parse_relative_time(time_text)
+                pub_date = parse_relative_time(time_node.strip())
                 
                 if pub_date >= threshold:
                     link = art.get('href', '')
@@ -53,8 +59,8 @@ def scrape():
                         "time": pub_date.strftime("%Y-%m-%d %H:%M")
                     })
         
-        print(f"Punters 成功抓取 {len(extracted_data)} 則新聞。")
+        print(f"   ✅ Punters 抓取成功，共 {len(extracted_data)} 則")
         return extracted_data
     except Exception as e:
-        print(f"Punters 失敗: {e}")
+        print(f"   ❌ Punters 失敗: {e}")
         return []
