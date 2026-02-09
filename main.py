@@ -70,7 +70,7 @@ def generate_ai_report(all_headlines):
 def run_all():
     all_data = []
     # 執行所有媒體模組
-    SITES = ['racing_post', 'scmp_racing', 'singtao_racing', 'punters_au', 'netkeiba_news', 'bloodhorse_news']
+    SITES = ['racing_post', 'scmp_racing', 'singtao_racing', 'punters_au', 'racing_com', 'netkeiba_news', 'bloodhorse_news']
     
     for site in SITES:
         try:
