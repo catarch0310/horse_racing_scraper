@@ -4,87 +4,78 @@ from datetime import datetime, timedelta
 import re
 
 def parse_relative_time(time_str):
-    """
-    將 '10 hours ago', '1 day ago', '30 mins ago' 轉換為 datetime
-    """
     now = datetime.now()
-    time_str = time_str.lower().strip()
-    
-    # 提取數字
+    # 找尋數字 (例如 '10' hours ago)
     number = re.search(r'\d+', time_str)
-    if not number:
-        return now
-    
+    if not number: return now
     n = int(number.group())
     
-    if 'min' in time_str:
-        return now - timedelta(minutes=n)
-    elif 'hour' in time_str:
-        return now - timedelta(hours=n)
-    elif 'day' in time_str:
-        return now - timedelta(days=n)
-    
+    time_str = time_str.lower()
+    if 'hour' in time_str: return now - timedelta(hours=n)
+    if 'day' in time_str: return now - timedelta(days=n)
+    if 'min' in time_str: return now - timedelta(minutes=n)
     return now
 
 def scrape():
     base_url = "https://www.punters.com.au"
     news_url = "https://www.punters.com.au/news/latest-news/"
+    # 36小時門檻
+    threshold = datetime.now() - timedelta(hours=36)
     
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,arm64e/v1,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Referer': 'https://www.google.com/',
+        'DNT': '1',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1'
     }
     
-    print(f"--- 啟動 Punters.com.au 抓取 ---")
+    print(f"--- 正在嘗試抓取 Punters 第一頁 ---")
     
     try:
-        res = requests.get(news_url, headers=headers, timeout=15)
+        session = requests.Session()
+        # 先造訪一次首頁建立 Session/Cookie
+        session.get(base_url, headers=headers, timeout=10)
+        
+        # 真正抓取新聞頁
+        res = session.get(news_url, headers=headers, timeout=15)
+        
         if res.status_code != 200:
-            print(f"Punters 請求失敗: {res.status_code}")
+            print(f"    ❌ Punters 被擋 (HTTP {res.status_code})")
             return []
 
         soup = BeautifulSoup(res.text, 'html.parser')
-        extracted_data = []
+        # 尋找所有包含新聞的 a 標籤
+        articles = soup.find_all('a', class_=re.compile(r'news-tile'))
         
-        # 設定 36 小時門檻
-        threshold = datetime.now() - timedelta(hours=36)
-
-        # 根據截圖，新聞項目在 a.news-tile 標籤中
-        articles = soup.select('a.news-tile')
-        print(f"找到 {len(articles)} 個新聞區塊，進行時間檢查...")
-
+        extracted_data = []
         for art in articles:
-            # 1. 抓取標題
-            title_node = art.select_one('.news-tile__title')
-            if not title_node:
-                continue
-            title = title_node.get_text(strip=True)
+            # 抓標題 (通常在 .news-tile__title)
+            title_node = art.find(['p', 'span', 'h3'], class_=re.compile(r'title'))
+            # 抓時間文字 (包含 'ago' 的字串)
+            time_node = art.find(string=re.compile(r'ago'))
             
-            # 2. 抓取連結
-            link = art.get('href', '')
-            if link.startswith('/'):
-                link = base_url + link
+            if title_node and time_node:
+                title = title_node.get_text(strip=True)
+                time_text = time_node.strip()
+                pub_date = parse_relative_time(time_text)
                 
-            # 3. 抓取時間並轉換 (通常在 .news-tile__meta 或包含 'ago' 的文字中)
-            # 根據截圖，時間通常在標題下方的 meta 資訊中
-            time_node = art.select_one('.news-tile__date, .news-tile__meta, span')
-            # 如果上面的 selector 沒抓到，我們找包含 'ago' 文字的標籤
-            if not time_node:
-                time_node = art.find(string=re.compile(r'ago'))
+                if pub_date >= threshold:
+                    link = art.get('href', '')
+                    extracted_data.append({
+                        "title": title,
+                        "link": base_url + link if link.startswith('/') else link,
+                        "time": pub_date.strftime("%Y-%m-%d %H:%M")
+                    })
+        
+        if not extracted_data:
+            # 如果抓不到，印出前 200 字原始碼 Debug
+            print(f"    ⚠️ 抓不到標籤，網頁內容預覽: {res.text[:200]}")
             
-            time_text = time_node.get_text(strip=True) if time_node else "0 hours ago"
-            pub_date = parse_relative_time(time_text)
-            
-            # 4. 36 小時過濾
-            if pub_date >= threshold:
-                extracted_data.append({
-                    "title": title,
-                    "link": link,
-                    "time": pub_date.strftime("%Y-%m-%d %H:%M") + f" ({time_text})"
-                })
-
-        print(f"Punters 抓取完成，符合 36 小時內的新聞共 {len(extracted_data)} 則")
         return extracted_data
 
     except Exception as e:
-        print(f"Punters 執行失敗: {e}")
+        print(f"    ❌ Punters 錯誤: {e}")
         return []
