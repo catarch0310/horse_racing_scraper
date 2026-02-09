@@ -1,1 +1,1 @@
-AI 報告生成失敗：模型初始化失敗。
+AI 報告內容生成出錯: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
