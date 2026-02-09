@@ -1,3 +1,6 @@
+
+
+
 import pandas as pd
 from datetime import datetime
 import os
@@ -5,29 +8,55 @@ import importlib
 import google.generativeai as genai
 import time
 
-# --- AI 核心設定 (修正模型初始化失敗問題) ---
+# --- AI 設定與自動偵測 ---
 API_KEY = os.getenv("GEMINI_API_KEY")
 
-def get_model():
+def get_best_model():
+    """ 自動偵測可用的模型名稱，解決 404 v1beta 錯誤 """
     if not API_KEY:
-        print("❌ 找不到 API KEY")
         return None
+    
+    genai.configure(api_key=API_KEY)
+    
+    # 這裡列出幾個可能的模型名稱格式
+    candidate_names = [
+        'gemini-1.5-flash', 
+        'models/gemini-1.5-flash', 
+        'gemini-1.5-pro',
+        'models/gemini-1.5-pro'
+    ]
+    
+    print("🤖 正在偵測可用 AI 模型...")
+    for name in candidate_names:
+        try:
+            model = genai.GenerativeModel(name)
+            # 測試性的小請求，確認模型是否真的存在且可用
+            model.generate_content("hi", generation_config={"max_output_tokens": 1})
+            print(f"✅ 成功啟用模型: {name}")
+            return model
+        except Exception:
+            continue
+    
+    # 如果候選名單都失敗，嘗試從系統清單中抓第一個可用的
     try:
-        genai.configure(api_key=API_KEY)
-        # 直接使用官方最穩定的名稱
-        return genai.GenerativeModel('gemini-1.5-flash')
-    except Exception as e:
-        print(f"❌ AI 配置失敗: {e}")
-        return None
+        for m in genai.list_models():
+            if 'generateContent' in m.supported_generation_methods:
+                print(f"⚠️ 使用系統自動發現模型: {m.name}")
+                return genai.GenerativeModel(m.name)
+    except:
+        pass
+        
+    return None
 
-# 直接初始化，不要做檢測請求
-model_instance = get_model()
+# 初始化模型
+model_instance = get_best_model()
 
 def generate_ai_report(all_headlines):
-    """ 生成英、中、日三語報告 """
+    """將所有標題投給 AI 進行分類、排序與綜合摘要"""
     if not model_instance:
-        return "AI 報告生成失敗：模型未就緒。請檢查環境變數 GEMINI_API_KEY。"
+        return "AI 報告生成失敗：模型初始化失敗，請檢查 API Key 或模型權限。"
 
+    # 整理標題清單
     news_list_text = ""
     for i, item in enumerate(all_headlines):
         news_list_text += f"{i+1}. [{item['source']}] {item['title']}\n"
@@ -60,20 +89,17 @@ def generate_ai_report(all_headlines):
     """
 
     try:
-        # 增加輸出 token 限制以容納三種語言
-        response = model_instance.generate_content(
-            prompt, 
-            generation_config={"max_output_tokens": 4000, "temperature": 0.7}
-        )
+        response = model_instance.generate_content(prompt)
         return response.text.strip()
     except Exception as e:
         return f"AI 報告內容生成出錯: {str(e)}"
 
 def run_all():
     all_data = []
-    # 媒體清單
-    SITES = ['racing_post', 'scmp_racing', 'singtao_racing', 'punters_au', 'racing_com', 'netkeiba_news', 'bloodhorse_news']
+    # 確保模組名稱正確
+    SITES = ['racing_post', 'scmp_racing', 'singtao_racing', 'punters_au', 'netkeiba_news', 'bloodhorse_news']
     
+    # 1. 執行爬蟲
     for site in SITES:
         try:
             print(f"\n>>> 任務開始: {site}")
@@ -82,7 +108,7 @@ def run_all():
             if data:
                 for item in data: item['source'] = site
                 all_data.extend(data)
-                print(f"    ✅ 成功抓取 {len(data)} 則")
+                print(f"    ✅ 抓到 {len(data)} 則")
         except Exception as e:
             print(f"    ❌ {site} 錯誤: {e}")
 
@@ -90,18 +116,23 @@ def run_all():
         date_str = datetime.now().strftime('%Y%m%d')
         os.makedirs('data', exist_ok=True)
 
-        # 1. 原始 CSV
+        # --- 輸出文件 1：CSV ---
         df = pd.DataFrame(all_data)
-        df.to_csv(f"data/raw_news_{date_str}.csv", index=False, encoding='utf-8-sig')
+        csv_filename = f"data/raw_news_{date_str}.csv"
+        df.to_csv(csv_filename, index=False, encoding='utf-8-sig')
+        print(f"\n💾 CSV 已存至: {csv_filename}")
 
-        # 2. AI 三語報告
-        print(f"\n🤖 正在生成英/中/日三語戰報...")
-        report = generate_ai_report(all_data)
-        with open(f"data/racing_report_{date_str}.md", "w", encoding="utf-8") as f:
-            f.write(report)
-        print(f"✨ 任務完成！")
+        # --- 輸出文件 2：AI Markdown ---
+        print(f"\n🤖 啟動 AI 總編輯模式...")
+        ai_report_content = generate_ai_report(all_data)
+        
+        md_filename = f"data/racing_report_{date_str}.md"
+        with open(md_filename, "w", encoding="utf-8") as f:
+            f.write(ai_report_content)
+        
+        print(f"✨ AI 戰報已生成: {md_filename}")
     else:
-        print("\n❌ 未抓取到任何資料。")
+        print("\n❌ 今日無新聞數據，不生成報告。")
 
 if __name__ == "__main__":
     run_all()
