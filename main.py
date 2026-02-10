@@ -60,7 +60,7 @@ def generate_ai_report(all_headlines):
 
     prompt = f"""
     You are a Global Horse Racing Chief Editor. 
-    Analyze these headlines from UK, HK, AU, JP, and US:
+    Analyze these headlines from UK, HK, AU, JP, US, and FRANCE:
     
     {news_list_text}
     
@@ -78,6 +78,8 @@ def generate_ai_report(all_headlines):
     - Use Traditional Chinese (Hong Kong).
     - **MANDATORY**: Use official Hong Kong Jockey Club (HKJC) translations for names.
     - Examples: 'David Hayes' -> '希斯', 'Aidan O'Brien' -> '岳伯仁', 'Sha Tin' -> '沙田', 'Happy Valley' -> '跑馬地'.
+    - For FRENCH news (Equidia): Translate and summarize their key European racing insights.
+
 
     --- SPECIAL INSTRUCTIONS FOR JAPANESE ---
     - Use professional Japanese horse racing terminology (e.g., 重賞, 追い切り).
@@ -94,7 +96,7 @@ def generate_ai_report(all_headlines):
 def run_all():
     all_data = []
     # 確保模組名稱正確
-    SITES = ['racing_post', 'scmp_racing', 'singtao_racing', 'punters_au', 'racing_com', 'tospo_keiba', 'netkeiba_news', 'bloodhorse_news', 'the_straight', 'anz_bloodstock', 'ttr_ausnz', 'smh_racing', 'drf_news', 'racenet_news', 'daily_telegraph']
+    SITES = ['racing_post', 'scmp_racing', 'singtao_racing', 'punters_au', 'racing_com', 'tospo_keiba', 'netkeiba_news', 'bloodhorse_news', 'the_straight', 'anz_bloodstock', 'ttr_ausnz', 'smh_racing', 'drf_news', 'racenet_news', 'daily_telegraph', 'equidia_racing']
     
     # 1. 執行爬蟲
     for site in SITES:
