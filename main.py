@@ -5,7 +5,7 @@ import importlib
 import google.generativeai as genai
 import time
 
-# --- AI 設定與自動偵測 ---
+# --- AI 設定與自動偵測 (完全保留你的穩定邏輯) ---
 API_KEY = os.getenv("GEMINI_API_KEY")
 
 def get_best_model():
@@ -15,7 +15,6 @@ def get_best_model():
     
     genai.configure(api_key=API_KEY)
     
-    # 這裡列出幾個可能的模型名稱格式
     candidate_names = [
         'gemini-1.5-flash', 
         'models/gemini-1.5-flash', 
@@ -27,14 +26,12 @@ def get_best_model():
     for name in candidate_names:
         try:
             model = genai.GenerativeModel(name)
-            # 測試性的小請求，確認模型是否真的存在且可用
             model.generate_content("hi", generation_config={"max_output_tokens": 1})
             print(f"✅ 成功啟用模型: {name}")
             return model
         except Exception:
             continue
     
-    # 如果候選名單都失敗，嘗試從系統清單中抓第一個可用的
     try:
         for m in genai.list_models():
             if 'generateContent' in m.supported_generation_methods:
@@ -49,53 +46,78 @@ def get_best_model():
 model_instance = get_best_model()
 
 def generate_ai_report(all_headlines):
-    """將所有標題投給 AI 進行分類、排序與綜合摘要"""
+    """強化版 AI 總編輯報告生成：結構更專業、分析更透徹"""
     if not model_instance:
         return "AI 報告生成失敗：模型初始化失敗，請檢查 API Key 或模型權限。"
 
-    # 整理標題清單
+    # 整理標題清單，加入 ID 方便 AI 比對
     news_list_text = ""
     for i, item in enumerate(all_headlines):
-        news_list_text += f"{i+1}. [{item['source']}] {item['title']}\n"
+        news_list_text += f"ID: {i+1} | Source: {item['source']} | Title: {item['title']}\n"
 
+    # --- 改造後的專業編輯 Prompt ---
     prompt = f"""
-    You are a Global Horse Racing Chief Editor. 
-    Analyze these headlines from UK, HK, AU, JP, US, and FRANCE:
+    # Role
+    You are the Executive Chief Editor of a global premium horse racing news agency. Analyze the following headlines from UK, HK, AU, JP, US, and FRANCE:
     
     {news_list_text}
     
-    Please generate a report in THREE parts in this exact order:
-    1. ENGLISH VERSION
-    2. TRADITIONAL CHINESE VERSION (HONG KONG)
-    3. JAPANESE VERSION
+    # Task
+    Generate a "Global Racing Strategic Intelligence Report" in THREE languages: 1. ENGLISH, 2. TRADITIONAL CHINESE (HK), 3. JAPANESE.
 
-    Requirements for each language:
-    - **Top 5 Priority**: Choose the 5 most important global news and explain why in one sentence.
-    - **Categorized Summaries**: Summarize others into "HK Racing", "International Racing", and "Analysis".
-    - **Global Trend**: A 100-word analysis of today's atmosphere.
+    # Format & Structure (Apply to EACH language version)
+    
+    ## 1. Top 5 Priority News (Breaking & Strategic)
+    - Identify the 5 most critical stories globally.
+    - Instead of just summarizing, explain their **Strategic Impact** (e.g., "This injury changes the G1 field hierarchy" or "The auction results indicate a strong market for Japanese bloodlines").
 
-    --- SPECIAL INSTRUCTIONS FOR CHINESE ---
-    - Use Traditional Chinese (Hong Kong).
-    - **MANDATORY**: Use official Hong Kong Jockey Club (HKJC) translations for names.
-    - Examples: 'David Hayes' -> '希斯', 'Aidan O'Brien' -> '岳伯仁', 'Sha Tin' -> '沙田', 'Happy Valley' -> '跑馬地'.
-    - For FRENCH news (Equidia): Translate and summarize their key European racing insights.
+    ## 2. Regional Intelligence Matrix (Desk Summaries)
+    Group and summarize the remaining news into these professional desks:
+    - **Hong Kong Desk**: Local trainer/jockey moves, betting sentiment, and race updates.
+    - **Oceania Desk (AU/NZ)**: Sales (Inglis/Magic Millions), industry politics, and carnival previews.
+    - **Japan & Asian-Pacific Desk**: JRA updates, Japanese raiders abroad, and key workouts.
+    - **EMEA & Americas Desk**: US Triple Crown preps, UK/France major stakes, and breeding news.
 
+    ## 3. The "Global Pulse" (Cross-Border Connections)
+    - A 100-word expert analysis identifying trends connecting different regions (e.g., European jockeys riding in Australia, or the impact of global currency on bloodstock sales).
 
-    --- SPECIAL INSTRUCTIONS FOR JAPANESE ---
-    - Use professional Japanese horse racing terminology (e.g., 重賞, 追い切り).
+    ## 4. Editor's Watchlist
+    - 3 key events or horses to track in the next 48 hours.
 
-    Format with professional Markdown headers.
+    # Mandatory Terminology & Translation Instructions
+    - **Traditional Chinese (Hong Kong)**: MUST follow official Hong Kong Jockey Club (HKJC) translations.
+        - Names: David Hayes -> 希斯, James McDonald -> 麥道朗, Zac Purton -> 潘頓, Ryan Moore -> 莫雅, Aidan O'Brien -> 岳伯仁.
+        - Races/Places: Sha Tin -> 沙田, Classic Mile -> 經典一哩賽, G1 -> 一級賽, Bloodstock -> 血統/育馬.
+    - **Japanese**: Use professional terminology (重賞, 追い切り, ワークアウト, リーディング).
+
+    # Style
+    - Authoritative, concise, and structured with professional Markdown headers and bullet points.
     """
 
     try:
-        response = model_instance.generate_content(prompt)
+        # 修正：加入安全設定防止「賭博相關內容」過濾，並增加輸出長度
+        safety_settings = [
+            {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"},
+        ]
+
+        response = model_instance.generate_content(
+            prompt,
+            generation_config={
+                "max_output_tokens": 8000, # 增加長度確保三語不被切斷
+                "temperature": 0.4,       # 降低隨機性，確保譯名精確穩定
+            },
+            safety_settings=safety_settings
+        )
         return response.text.strip()
     except Exception as e:
         return f"AI 報告內容生成出錯: {str(e)}"
 
 def run_all():
     all_data = []
-    # 確保模組名稱正確
+    # 媒體清單
     SITES = ['racing_post', 'scmp_racing', 'singtao_racing', 'punters_au', 'racing_com', 'tospo_keiba', 'netkeiba_news', 'bloodhorse_news', 'the_straight', 'anz_bloodstock', 'ttr_ausnz', 'smh_racing', 'drf_news', 'racenet_news', 'daily_telegraph', 'equidia_racing']
     
     # 1. 執行爬蟲
@@ -122,7 +144,7 @@ def run_all():
         print(f"\n💾 CSV 已存至: {csv_filename}")
 
         # --- 輸出文件 2：AI Markdown ---
-        print(f"\n🤖 啟動 AI 總編輯模式...")
+        print(f"\n🤖 啟動 AI 總編輯模式 (三語/專業結構)...")
         ai_report_content = generate_ai_report(all_data)
         
         md_filename = f"data/racing_report_{date_str}.md"
