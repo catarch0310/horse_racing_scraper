@@ -4,147 +4,126 @@ import os
 import importlib
 import google.generativeai as genai
 import time
-from difflib import SequenceMatcher
-import re
 
-# --- 1. AI 核心設定 ---
+# --- AI 設定與自動偵測 (完全保留你的穩定邏輯) ---
 API_KEY = os.getenv("GEMINI_API_KEY")
 
-def init_ai():
+def get_best_model():
+    """ 自動偵測可用的模型名稱，解決 404 v1beta 錯誤 """
     if not API_KEY:
-        print("❌ 錯誤：找不到 GEMINI_API_KEY")
         return None
-    try:
-        genai.configure(api_key=API_KEY)
-        # 直接使用模型名稱，避開 models/ 前綴以相容 v1beta
-        return genai.GenerativeModel('gemini-1.5-flash')
-    except Exception as e:
-        print(f"❌ AI 初始化失敗: {e}")
-        return None
-
-model = init_ai()
-
-# --- 2. 智慧翻譯功能 (只翻譯中日文，節省 70% Token) ---
-def is_need_translation(text):
-    """檢查是否包含中日文字元"""
-    # 匹配中文字元 (\u4e00-\u9fff) 或 日文假名 (\u3040-\u30ff)
-    if re.search(r'[\u4e00-\u9fff\u3040-\u30ff]', text):
-        return True
-    return False
-
-def translate_titles_smartly(all_data):
-    if not model or not all_data:
-        return all_data
     
-    # 1. 篩選出需要翻譯的項目 (記錄索引)
-    to_translate_indices = []
-    titles_to_send = []
+    genai.configure(api_key=API_KEY)
     
-    for idx, item in enumerate(all_data):
-        if is_need_translation(item['title']):
-            to_translate_indices.append(idx)
-            titles_to_send.append(item['title'])
+    candidate_names = [
+        'gemini-1.5-flash', 
+        'models/gemini-1.5-flash', 
+        'gemini-1.5-pro',
+        'models/gemini-1.5-pro'
+    ]
     
-    if not titles_to_send:
-        print("✅ 所有標題均為英文，跳過翻譯步驟。")
-        return all_data
-
-    print(f"🌐 發現 {len(titles_to_send)} 則中/日文標題，準備翻譯 (其餘 {len(all_data)-len(titles_to_send)} 則跳過)...")
-    
-    # 2. 分段翻譯 (每 50 則一組)
-    chunk_size = 50
-    for i in range(0, len(titles_to_send), chunk_size):
-        chunk_titles = titles_to_send[i : i + chunk_size]
-        chunk_indices = to_translate_indices[i : i + chunk_size]
-        
-        prompt = (
-            "Translate these Japanese or Chinese horse racing headlines into English. "
-            "Return ONLY the translations, one per line, strictly maintaining the order:\n\n" 
-            + "\n".join(chunk_titles)
-        )
-        
+    print("🤖 正在偵測可用 AI 模型...")
+    for name in candidate_names:
         try:
-            response = model.generate_content(prompt)
-            translated_lines = response.text.strip().split('\n')
-            
-            # 將翻譯結果塞回原始數據
-            for j, orig_idx in enumerate(chunk_indices):
-                if j < len(translated_lines):
-                    en_text = translated_lines[j].strip()
-                    # 避免 AI 廢話或重複
-                    if en_text and len(en_text) > 5:
-                        all_data[orig_idx]['title'] = f"{all_data[orig_idx]['title']} ({en_text})"
-            
-            print(f"   ✅ 已完成第 {i+1} 至 {min(i + chunk_size, len(titles_to_send))} 則翻譯")
-            time.sleep(3) # 避開頻率限制
-        except Exception as e:
-            print(f"   ⚠️ 此段翻譯失敗: {str(e)[:50]}")
-            
-    return all_data
+            model = genai.GenerativeModel(name)
+            model.generate_content("hi", generation_config={"max_output_tokens": 1})
+            print(f"✅ 成功啟用模型: {name}")
+            return model
+        except Exception:
+            continue
+    
+    try:
+        for m in genai.list_models():
+            if 'generateContent' in m.supported_generation_methods:
+                print(f"⚠️ 使用系統自動發現模型: {m.name}")
+                return genai.GenerativeModel(m.name)
+    except:
+        pass
+        
+    return None
 
-# --- 3. 戰略分析報告 (英文) ---
-def generate_strategic_report(all_headlines):
-    if not model: return "AI Model Not Ready."
+# 初始化模型
+model_instance = get_best_model()
 
-    # 格式化清單供 AI 分析 (最多分析 200 則精華)
-    news_text = ""
-    for i, item in enumerate(all_headlines[:200]):
-        news_text += f"ID: {i+1} | Source: {item['source']} | Title: {item['title']}\n"
+def generate_ai_report(all_headlines):
+    """強化版 AI 總編輯報告生成：結構更專業、分析更透徹"""
+    if not model_instance:
+        return "AI 報告生成失敗：模型初始化失敗，請檢查 API Key 或模型權限。"
 
+    # 整理標題清單，加入 ID 方便 AI 比對
+    news_list_text = ""
+    for i, item in enumerate(all_headlines):
+        news_list_text += f"ID: {i+1} | Source: {item['source']} | Title: {item['title']}\n"
+
+    # --- 改造後的專業編輯 Prompt ---
     prompt = f"""
     # Role
-    You are a Strategic Industry Analyst for global horse racing. 
-    Review these headlines and provide a brief in ENGLISH for senior editors.
-
-    # Raw Data
-    {news_text}
-
+    You are the Executive Chief Editor of a global premium horse racing news agency. Analyze the following headlines from UK, HK, AU, JP, US, and FRANCE:
+    
+    {news_list_text}
+    
     # Task
-    1. **TOP 5 STRATEGIC KEYWORDS**: List 5 most important themes and briefly explain why they are trending.
-    2. **OUTLIER RADAR**: Identify 2-3 niche/unusual stories with potential global impact.
+    Generate a "Global Racing Strategic Intelligence Report" in THREE languages: 1. ENGLISH, 2. TRADITIONAL CHINESE (HK), 3. JAPANESE.
 
-    Format with professional Markdown.
+    # Format & Structure (Apply to EACH language version)
+    
+    ## 1. Top 5 Priority News (Breaking & Strategic)
+    - Identify the 5 most critical stories globally.
+    - Instead of just summarizing, explain their **Strategic Impact** (e.g., "This injury changes the G1 field hierarchy" or "The auction results indicate a strong market for Japanese bloodlines").
+
+    ## 2. Regional Intelligence Matrix (Desk Summaries)
+    Group and summarize the remaining news into these professional desks:
+    - **Hong Kong Desk**: Local trainer/jockey moves, betting sentiment, and race updates.
+    - **Oceania Desk (AU/NZ)**: Sales (Inglis/Magic Millions), industry politics, and carnival previews.
+    - **Japan & Asian-Pacific Desk**: JRA updates, Japanese raiders abroad, and key workouts.
+    - **EMEA & Americas Desk**: US Triple Crown preps, UK/France major stakes, and breeding news.
+
+    ## 3. The "Global Pulse" (Cross-Border Connections)
+    - A 100-word expert analysis identifying trends connecting different regions (e.g., European jockeys riding in Australia, or the impact of global currency on bloodstock sales).
+
+    ## 4. Editor's Watchlist
+    - 3 key events or horses to track in the next 48 hours.
+
+    # Mandatory Terminology & Translation Instructions
+    - **Traditional Chinese (Hong Kong)**: MUST follow official Hong Kong Jockey Club (HKJC) translations.
+        - Names: David Hayes -> 希斯, James McDonald -> 麥道朗, Zac Purton -> 潘頓, Ryan Moore -> 莫雅, Aidan O'Brien -> 岳伯仁.
+        - Races/Places: Sha Tin -> 沙田, Classic Mile -> 經典一哩賽, G1 -> 一級賽, Bloodstock -> 血統/育馬.
+    - **Japanese**: Use professional terminology (重賞, 追い切り, ワークアウト, リーディング).
+
+    # Style
+    - Authoritative, concise, and structured with professional Markdown headers and bullet points.
     """
 
     try:
-        safety = [{"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}]
-        response = model.generate_content(prompt, safety_settings=safety)
+        # 修正：加入安全設定防止「賭博相關內容」過濾，並增加輸出長度
+        safety_settings = [
+            {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"},
+        ]
+
+        response = model_instance.generate_content(
+            prompt,
+            generation_config={
+                "max_output_tokens": 8000, # 增加長度確保三語不被切斷
+                "temperature": 0.4,       # 降低隨機性，確保譯名精確穩定
+            },
+            safety_settings=safety_settings
+        )
         return response.text.strip()
     except Exception as e:
-        return f"Report failed: {str(e)}"
+        return f"AI 報告內容生成出錯: {str(e)}"
 
-# --- 4. 資料清洗 ---
-def similarity(a, b):
-    return SequenceMatcher(None, a.lower(), b.lower()).ratio()
-
-def deduplicate_data(all_data):
-    if not all_data: return []
-    unique_url_data = []
-    seen_urls = set()
-    for item in all_data:
-        if item['link'] not in seen_urls:
-            seen_urls.add(item['link'])
-            unique_url_data.append(item)
-    
-    final_data = []
-    for item in unique_url_data:
-        is_duplicate = False
-        for existing_item in final_data:
-            if similarity(item['title'], existing_item['title']) > 0.85:
-                is_duplicate = True
-                break
-        if not is_duplicate:
-            final_data.append(item)
-    return final_data
-
-# --- 5. 總執行流程 ---
 def run_all():
     all_data = []
+    # 媒體清單
     SITES = ['racing_post', 'scmp_racing', 'singtao_racing', 'punters_au', 'racing_com', 'tospo_keiba', 'netkeiba_news', 'bloodhorse_news', 'the_straight', 'anz_bloodstock', 'ttr_ausnz', 'smh_racing', 'drf_news', 'racenet_news', 'daily_telegraph', 'equidia_racing']
     
+    # 1. 執行爬蟲
     for site in SITES:
         try:
-            print(f"\n>>> 執行: {site}")
+            print(f"\n>>> 任務開始: {site}")
             module = importlib.import_module(f"scrapers.{site}")
             data = module.scrape()
             if data:
@@ -155,28 +134,26 @@ def run_all():
             print(f"    ❌ {site} 錯誤: {e}")
 
     if all_data:
-        # A. 數據去重
-        all_data = deduplicate_data(all_data)
-        
-        # B. 智慧翻譯 (只翻譯非英文標題)
-        all_data = translate_titles_smartly(all_data)
-
         date_str = datetime.now().strftime('%Y%m%d')
         os.makedirs('data', exist_ok=True)
 
-        # C. 儲存原始 CSV
+        # --- 輸出文件 1：CSV ---
         df = pd.DataFrame(all_data)
-        df.to_csv(f"data/raw_news_{date_str}.csv", index=False, encoding='utf-8-sig')
-        print(f"\n💾 CSV 已存至: data/raw_news_{date_str}.csv")
+        csv_filename = f"data/raw_news_{date_str}.csv"
+        df.to_csv(csv_filename, index=False, encoding='utf-8-sig')
+        print(f"\n💾 CSV 已存至: {csv_filename}")
 
-        # D. 生成報告
-        print(f"\n🤖 生成戰略報告...")
-        report = generate_strategic_report(all_data)
-        with open(f"data/strategic_report_{date_str}.md", "w", encoding="utf-8") as f:
-            f.write(report)
-        print(f"✨ 戰略報告完成: strategic_report_{date_str}.md")
+        # --- 輸出文件 2：AI Markdown ---
+        print(f"\n🤖 啟動 AI 總編輯模式 (三語/專業結構)...")
+        ai_report_content = generate_ai_report(all_data)
+        
+        md_filename = f"data/racing_report_{date_str}.md"
+        with open(md_filename, "w", encoding="utf-8") as f:
+            f.write(ai_report_content)
+        
+        print(f"✨ AI 戰報已生成: {md_filename}")
     else:
-        print("\n❌ 今日無新聞。")
+        print("\n❌ 今日無新聞數據，不生成報告。")
 
 if __name__ == "__main__":
     run_all()
