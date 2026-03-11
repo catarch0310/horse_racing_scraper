@@ -1,0 +1,24 @@
+# Cross-Check Analysis: Global Horse Racing Industry
+
+## 1. TOP 5 STRATEGIC KEYWORDS
+
+1.  **Cheltenham Festival**: This keyword dominates UK and French racing news, indicating its status as a premier National Hunt event. The headlines cover race results (Lossiemouth, Kargese), trainer achievements (Willie Mullins), betting activity, previews, and logistical challenges (railway delays). Its prominence underscores the significant economic and sporting impact of major festivals on regional and international scales.
+
+2.  **Derby & Classic Preps (Global)**: A consistent theme across Hong Kong, Japan, and the US, focusing on the build-up to major classic races. This includes the Hong Kong Derby (China Win, Invincible Ibis), US Kentucky Derby Future Wagers (Paladin, The Puma), and Japanese Classics like the Satsuki Sho (Admire Quads, Crepuscular) and Osaka Hai (Lebensstil, Danon Decile). This highlights the global pursuit of future champions and the intense competition and speculation surrounding these prestigious events, which are crucial for breeding and racing careers.
+
+3.  **Bloodstock Market Activity**: News from the US and Australia frequently references sales events (OBS March Sale, Magic Millions, Inglis Chairman's Sale), highlighting the trade of yearlings and juveniles. Mentions of specific sires (Toronado, Justify) and the value of progeny (Drain the Clock Colt, Corniche Colt) underscore the ongoing health and dynamics of the breeding and sales sectors, which are fundamental to the industry's long-term sustainability and investment.
+
+4.  **International Race Campaigns & Logistics**: Several headlines discuss horses traveling for major international races (Dubai World Cup/Sheema Classic, Hong Kong G1s, Royal Ascot) and the challenges involved. The impact of the "Middle East conflict" on travel plans (Dubai Honour, Danon Decile, Bidaya) and horse registrations (Strauss, Lebensstil for HK QE2) reveals the geopolitical and logistical complexities inherent in global racing, affecting participation and prize money distribution.
+
+5.  **Industry Governance, Welfare & Betting Relations**: This theme captures a range of regulatory, ethical, and commercial issues. Headlines include legal disputes (ATC vs Racing NSW Supreme Court ruling), trainer conduct (Evan Williams' license), media rights agreements (Betfred and TRP), and the evolving relationship between betting operators and racing bodies (BGC chief). These topics reflect ongoing efforts to maintain integrity, ensure welfare, and secure financial stability within the sport, often involving complex stakeholder negotiations.
+
+## 2. OUTLIER RADAR
+
+1.  **ID: 9 | Source: racing_post | Title: Evan Williams' licence taken over by wife Cath after trainer is found guilty of assaulting dog walker**
+    *   **Why look deeper?** This headline is highly unusual as it pertains to a trainer's personal legal conduct (assault) rather than racing-specific infractions (e.g., doping, race fixing, welfare breaches). The consequence – the transfer of a training license – is significant and rare. A deeper investigation could explore the precedent this sets for personal conduct impacting professional licenses, the due process involved, and the broader implications for the public image and regulatory oversight of racing personnel beyond the racetrack.
+
+2.  **ID: 70 | Source: racing_post | Title: Prediction markets are challenging the big US betting firms - and could have their sights set on this side of the Atlantic**
+    *   **Why look deeper?** This headline points to a potential technological disruption in the betting landscape. "Prediction markets" represent an alternative model to traditional pari-mutuel or fixed-odds betting. Their emergence and potential expansion into established racing markets could signal a shift in how betting revenue is generated, how odds are formed, and how racing engages with a new generation of bettors. Understanding this nascent trend is crucial for strategic planning regarding future revenue streams and competitive pressures on existing betting partners.
+
+3.  **ID: 212 | Source: netkeiba_news | Title: ウマ娘にラヴズオンリーユー&amp;マルシュロレーヌ登場に「いきなり来やがった」「胸熱」「同時に!」ネットは大盛り上がり (Love's Only You & Marche Lorraine Appear in Uma Musume, Net Buzzes with "They Just Showed Up!", "Heart-Warming!", "At the Same Time!")**
+    *   **Why look deeper?** This is an extraordinary headline that highlights the intersection of horse racing with popular culture, specifically a mobile game ("Uma Musume" or "Horse Girls"). While niche to Japan, it represents a powerful, non-traditional avenue for engaging new audiences, particularly younger demographics, with the sport's history and stars. A deeper dive could reveal strategies for leveraging intellectual property, the economic impact of such collaborations, and how racing can cultivate broader appeal beyond traditional fan bases, potentially offering a template for other regions.
