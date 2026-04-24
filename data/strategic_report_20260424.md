@@ -1,0 +1,27 @@
+## 1. TOP 5 STRATEGIC KEYWORDS
+
+1.  **Gambling Regulation & Market Challenges**
+    *   **Industry Context:** This is a critical and pervasive theme, particularly evident in the UK with extensive discussions around "affordability checks," the "black market," and "government intervention." Australian headlines also reflect market pressures with "bookmaker reverses windfall," "Tabcorp boots high-risk punters," and "Sportsbet cuts 50 jobs." This indicates a global industry grappling with increased regulatory scrutiny, its impact on consumer behavior, and the financial viability of wagering operators, which directly affects racing's funding model.
+
+2.  **Major International Race Events & Preparations**
+    *   **Industry Context:** A significant portion of global news focuses on upcoming marquee events such as the Kentucky Derby (US), Hong Kong Champions Day (QEII Cup, Champions Mile, Chairman's Sprint Prize) (HK/JP), Tenno Sho (Spring) (JP), Prix Ganay (FR), and Royal Ascot (UK). Headlines detail horse preparations, jockey assignments, barrier draws, and international participation, underscoring the sport's elite competitive calendar and the global interest in these high-stakes contests.
+
+3.  **Bloodstock & Breeding Market Dynamics**
+    *   **Industry Context:** The breeding sector remains a robust area of activity, with frequent reports on stallion roster announcements, service fees (e.g., Darley, Arrowfield, Per Incanto), and sales results (e.g., Magic Millions, Keeneland, Goffs). News about promising progeny (e.g., Equinox's full sister, Daring Tact's foal) and high-value purchases highlights the ongoing investment and strategic planning within this foundational segment of the industry, which ensures the future supply of racing talent.
+
+4.  **Equine & Human Athlete Welfare & Careers**
+    *   **Industry Context:** This theme encompasses the well-being and professional trajectories of both horses and jockeys/trainers. Headlines cover horse injuries and comebacks (e.g., Sugarkun, Romantic Warrior), jockey bans, returns from injury (e.g., Akio Sugawara, Hiroshi Kitamura), and unique career shifts (e.g., trainer to stable staff). This reflects the industry's ongoing focus on the health and safety of its participants, as well as the personal stories and challenges within the sport's competitive core.
+
+5.  **Industry Business & Governance**
+    *   **Industry Context:** This category captures the broader structural and financial health of the racing world. Examples include Churchill Downs' strategic acquisition of Preakness IP, CDI's record financial results, JRA's policy changes regarding international horse subsidies, and regional operational adjustments like job cuts at racing authorities (RWWA) or stable resets. These headlines indicate significant corporate strategy, financial performance, and administrative decisions that shape the industry's future landscape.
+
+## 2. OUTLIER RADAR
+
+1.  **ID: 7 | Source: racing_post | Title: Sporting superpowers combine as darts stars Luke Littler and Stephen Bunting become owners at Michael Owen's stables**
+    *   **Reason for deeper look:** This headline is unusual due to the specific cross-sport celebrity involvement. While celebrity ownership is not new, the participation of darts players, framed as "sporting superpowers," suggests a potentially novel approach to attracting new investors and broadening racing's appeal beyond traditional circles. A senior editor should investigate whether this represents a deliberate marketing strategy by Michael Owen's stables or a nascent trend in diversifying racing's ownership base, and its potential to draw new demographics and capital into the sport.
+
+2.  **ID: 90 | Source: tospo_keiba | Title: 調教師から転身した国枝栄厩務員が土曜東京でパドックデビュー 武豊騎乗の一戦へ「このために…」 (Stable staff Sakae Kunieda, who transitioned from trainer, to make his paddock debut at Tokyo on Saturday for a race ridden by Yutaka Take, saying "For this...")**
+    *   **Reason for deeper look:** The career transition of a former trainer to stable staff (groom/stable hand) is highly unconventional in the racing industry, where progression typically moves upwards. This unique human-interest story, especially involving a horse ridden by a prominent jockey like Yutaka Take, warrants further investigation. It could shed light on personal motivations, the economic pressures faced by trainers, or the evolving professional landscape within Japanese racing, offering a rare glimpse into the less glamorous but essential roles within the sport.
+
+3.  **ID: 238 | Source: bloodhorse_news | Title: Study: Sensors Prove Valuable Tool in Predicting Injury**
+    *   **Reason for deeper look:** This headline points to a significant technological advancement with direct implications for equine welfare and safety. The use of "sensors" for "predicting injury" represents a proactive, data-driven approach to horse health, moving beyond traditional diagnostic methods. A senior editor should explore the specifics of this technology, its efficacy, potential for widespread adoption across different racing jurisdictions, and its long-term impact on reducing fatalities, improving horse welfare, and enhancing the sport's public image. This could be a transformative development for the industry.
