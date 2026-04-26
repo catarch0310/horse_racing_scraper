@@ -1,0 +1,27 @@
+## 1. TOP 5 STRATEGIC KEYWORDS
+
+1.  **Derby Races (Kentucky & Japan)**
+    *   **Industry Context:** The Kentucky Derby and the Japan Derby (with its key qualifier, the Aoba Sho) are dominating headlines, particularly in US and Japanese media. This reflects the peak of the Triple Crown season preparations, with intense focus on contenders, trials, workouts, and gate draws. The high volume of news indicates significant betting interest, breeding implications for future stallions, and the global prestige associated with these classic races.
+
+2.  **Hong Kong Champions Day**
+    *   **Industry Context:** This major international race meeting is a focal point across Hong Kong, Japanese, US, and French racing media. Headlines frequently mention key horses (e.g., Ka Ying Rising, Romantic Warrior, Masquerade Ball), trainers, and jockeys. The event's prominence underscores Hong Kong's position as a global racing hub, attracting top international talent and significant commingled betting pools, as highlighted by the HKJC's partnership with PMU.
+
+3.  **Gambling Regulation & Affordability Checks (UK)**
+    *   **Industry Context:** A critical and contentious issue, particularly within the UK racing media. A significant number of headlines from Racing Post discuss financial risk checks, their impact on bettors, the potential growth of the black market, and calls for government reconsideration. This theme highlights the ongoing tension between regulatory oversight, player protection, and the economic sustainability of the racing industry, which relies heavily on betting revenue.
+
+4.  **Bloodstock Sales & Breeding Industry**
+    *   **Industry Context:** News related to stallion rosters, breeding fees, and various sales (e.g., Goffs Breeze-Up, Inglis Digital, Magic Millions Broodmare, Keeneland HORA) is consistently reported across Australia, UK, US, and Japan. This reflects the foundational economic engine of racing, with significant investment in future generations of racehorses and the ongoing valuation of breeding stock. Announcements of new stallion acquisitions, fee structures, and sale results are key indicators of market health and future racing trends.
+
+5.  **International Group 1 Campaigns**
+    *   **Industry Context:** Beyond the specific Derby races, there's a strong focus on elite horses targeting other major global Group 1 events such as the Prix de l'Arc de Triomphe, Breeders' Cup Classic, and Royal Ascot. Horses like Forever Young and Daryz are frequently mentioned, with their connections weighing strategic decisions for their autumn campaigns. This theme highlights the increasing internationalization of top-tier racing and the pursuit of global prestige and prize money.
+
+## 2. OUTLIER RADAR
+
+1.  **ID: 97 | Source: tospo_keiba | Title: 71歳の新たな挑戦は「調教師とはまた違って楽しいよ」 国枝栄厩務員が〝デビュー戦〟を総括 (71-Year-Old's New Challenge: Groom Sakae Kunieda Summarizes His "Debut Race" - "It's Different from Being a Trainer and Enjoyable.")**
+    *   **Why look deeper:** This is a remarkable human-interest story. A 71-year-old former trainer, a position of high status and responsibility, has chosen to debut as a stablehand/groom. This unconventional career shift, especially at such an advanced age, speaks volumes about an individual's profound passion for horses and the industry itself, transcending traditional roles and status. A senior editor should investigate the motivations behind this decision, the challenges and joys of the new role, and what it might reveal about the evolving workforce dynamics or the sheer dedication found within the racing community. It's a story that could resonate widely beyond typical racing enthusiasts.
+
+2.  **ID: 22 | Source: racing_post | Title: Perth festival finishes in farce after wrong result called in photo-finish**
+    *   **Why look deeper:** The use of the word "farce" in conjunction with a "wrong result called in photo-finish" at a festival meeting is highly alarming. This isn't a minor error; it's a fundamental breakdown in race integrity and officiating. Such incidents can severely erode public trust, particularly among bettors who rely on accurate results. A senior editor should immediately investigate the root cause of this error (e.g., human error, technical malfunction, procedural flaw), the immediate and long-term consequences for the racecourse, the regulatory body, and the impact on the betting public. Understanding how such a significant mistake occurred and what preventative measures are being implemented is crucial for maintaining the sport's credibility.
+
+3.  **ID: 49 | Source: racing_post | Title: 'Transparency is vital to the racing industry's sustainability' - Australia shows the way in barrier trial debate**
+    *   **Why look deeper:** While transparency is a general good, the specific focus on a "barrier trial debate" and Australia "showing the way" suggests a nuanced and potentially significant shift in industry standards. Barrier trials, often less scrutinized than official races, are crucial for horse preparation and can be indicators of future performance or potential issues. A debate around their transparency implies concerns about integrity, welfare, or information asymmetry. A senior editor should explore what specific issues prompted this debate in Australia, what measures have been implemented, and how these practices could influence or be adopted by other racing jurisdictions. This could be a leading indicator of broader industry movements towards enhanced accountability and public confidence.
