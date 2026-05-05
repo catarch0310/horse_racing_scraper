@@ -1,0 +1,34 @@
+As a Strategic Industry Analyst for Idol Horse, here is a cross-check analysis of the global racing headlines:
+
+## 1. TOP 5 STRATEGIC KEYWORDS
+
+1.  **British Racing Governance & Fragmentation (Ascot/Jockey Club vs. RCA)**
+    *   **Public Exposure:** High in the UK, with significant international attention (US sources picked it up). Headlines use strong, confrontational language ("war," "rupture," "ultimatum," "bombshell").
+    *   **News Value Potential:** Extremely high. This represents a fundamental challenge to the established governance and funding model of British racing. Experienced journalists will be dissecting the financial implications, the power dynamics between major stakeholders, and the potential for a complete restructuring of the sport's administration. The long-term impact on prize money, fixture lists, and international competitiveness is paramount.
+
+2.  **Kentucky Derby & Oaks (Historic Wins, Viewership, Sire Influence)**
+    *   **Public Exposure:** Global and immense. Golden Tempo's Derby win, Cherie DeVaux becoming the first woman trainer to win, Curlin's sire success, and record viewership for both the Derby and Oaks are highlighted across US, Australian, and Hong Kong media.
+    *   **News Value Potential:** High. Beyond the immediate race results, DeVaux's achievement is a powerful narrative for diversity and inclusion. The record viewership and robust Oaks wagering provide crucial data points on the sport's appeal and commercial health in the US. Curlin's emergence as a top sire has significant breeding industry implications. Follow-ups on Golden Tempo's Preakness status and the broader impact of these historic wins will be key.
+
+3.  **Global Bloodstock Market & Sire Power (Shuttling Sires, Sales Trends)**
+    *   **Public Exposure:** Moderate to high, particularly within industry-specific publications (US, AU). The shuttling of G1 Dubai World Cup winner Laurel River (Japan to Australia), Curlin's Derby sire success, and various sales announcements (Inglis Weanling, Magic Millions, Fasig-Tipton) are prominent.
+    *   **News Value Potential:** High. The international movement of elite sires reflects global breeding strategies and market demand. Sales results and stallion fee adjustments are vital economic indicators, signaling confidence and investment trends in the breeding sector. Experienced analysts will be tracking these movements for shifts in bloodline dominance and the overall economic health of the global thoroughbred industry.
+
+4.  **UK Gambling Regulation (Affordability Checks & Industry Impact)**
+    *   **Public Exposure:** High in the UK, with the Racing Post dedicating multiple headlines to the BHA's concerns and the "unintended consequences" of government intervention. Less direct international exposure, but a significant internal threat.
+    *   **News Value Potential:** Very high for the UK, and a critical case study for other jurisdictions. This issue directly threatens racing's primary funding stream in Britain. Experienced correspondents will be investigating the political lobbying efforts, the economic fallout on betting turnover and prize money, and the potential for a shift towards unregulated markets. It's a complex regulatory challenge with profound long-term implications for the sport's financial viability.
+
+5.  **International Classic Season & Emerging Talent (Guineas, Derby Trials, Major G1s)**
+    *   **Public Exposure:** Consistently high across all relevant racing jurisdictions (UK, JP, HK, US). Key results from the 1000 and 2000 Guineas (Bow Echo, True Love), Derby trials (Chester, French Derby), and major G1s like the Tenno Sho (Croix du Nord) are widely reported.
+    *   **News Value Potential:** Always high. These races are the proving ground for future champions, influencing breeding values and shaping the narrative of the racing year. Stories detailing Aidan O'Brien's continued dominance, specific horse performances (e.g., Bow Echo's rating alongside Frankel), and international challengers (e.g., T O Elvis in the US, Kiwi-breds in Australian Classics) are crucial for identifying the next generation of global stars and anticipating future G1 clashes.
+
+## 2. OUTLIER RADAR
+
+1.  **ID 91 | Source: tospo_keiba | Title: 石神深一が引退から4日でまさかの電撃復帰！コジュウチョウサンとのタッグでポニー界の頂点に返り咲き (Shinichi Ishigami makes a surprising comeback just 4 days after retirement! Returns to the top of the pony world with Koju Chosan.)**
+    *   **Why investigate:** This headline is highly unusual for a major thoroughbred racing publication. A professional jockey's "blitz comeback" into "pony racing" just four days after retirement is a quirky, human-interest story that deviates significantly from typical industry news. Veteran correspondents should delve into the "why" behind this rapid transition. Was it a symbolic act, a personal challenge, a protest against the pressures of professional racing, or a unique form of mental reset? This could offer a compelling narrative about the human element in racing, the love of the sport beyond the elite level, or even shed light on the mental health landscape for jockeys.
+
+2.  **ID 41 | Source: racing_post | Title: The seismic event in British history that put a stop to racing for two weeks - with big owners cast in the role of villains**
+    *   **Why investigate:** This historical retrospective, framed with dramatic language ("seismic event," "villains," "put a stop to racing"), suggests a significant, possibly scandalous, past incident. For experienced editors, this is a prime opportunity for a deep-dive feature. What was this event? Who were the "big owners" involved, and what were their motivations? What were the immediate and long-term consequences for British racing's structure, reputation, or relationship with its stakeholders? Unearthing such a compelling historical narrative could provide crucial context for current governance disputes (like the Ascot/RCA situation) or offer valuable lessons in industry crisis management and ethics.
+
+3.  **ID 59 | Source: racing_post | Title: Poker genius, visionary football chairman and pioneering data-led punter - the many (profitable) faces of Tony Bloom**
+    *   **Why investigate:** While betting is integral to racing, this headline focuses on a specific individual known for a multi-faceted, highly analytical approach to wagering. The description "pioneering data-led punter" is particularly noteworthy in an era increasingly dominated by data analytics and AI. Experienced journalists should explore Bloom's methodologies. How does he apply his "poker genius" and data-driven insights to horse racing? What specific analytical techniques does he employ? Understanding his approach could provide valuable insights into the future of professional punting, the role of advanced analytics in identifying value, and potentially even inform discussions around race integrity and market efficiency.
