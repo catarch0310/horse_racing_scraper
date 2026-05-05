@@ -84,7 +84,7 @@ def generate_strategic_brief(all_headlines):
 
     prompt = f"""
     # Role
-    You are a Strategic Industry Analyst for global horse racing. 
+    You are a Strategic Industry Analyst in a global horse racing newsroom called "Idol Horse". 
     Review the following news headlines collected from global sources (UK, HK, AU, JP, US, FR).
 
     # Raw Data Input
@@ -94,12 +94,14 @@ def generate_strategic_brief(all_headlines):
     Perform a cross-check analysis and output the following:
 
     ## 1. TOP 5 STRATEGIC KEYWORDS
-    Identify the 5 most frequent or significant keywords/themes currently trending across global media. 
-    For each keyword, briefly explain the industry context.
+    Your audience is a group of extremely experienced racing journalists and editors. 
+    You need to identify the 5 or significant keywords/themes currently trending across global media that you reckon these people need to be aware of. 
+    For each keyword, carefully analyse its public exposure and assess its potential to be followed up or digged in in terms of news value.
+    Remember your audience. No need to explain as you need to explain to amateur. 
 
     ## 2. OUTLIER RADAR (2-3 Items)
     Identify 2-3 specific headlines that are "unusual," "niche," or "out-of-the-ordinary." 
-    Explain why a senior editor should look deeper into these.
+    Explain why veteran correspondents and experienced editors in this field should look deeper into these.
 
     # Style
     Authoritative, analytical, and concise. Use professional Markdown headers.
