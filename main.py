@@ -96,12 +96,14 @@ def generate_strategic_brief(all_headlines):
     ## 1. TOP 5 STRATEGIC KEYWORDS
     Your audience is a group of extremely experienced racing journalists and editors. 
     You need to identify the 5 or significant keywords/themes currently trending across global media that you reckon these people need to be aware of. 
-    For each keyword, carefully analyse its public exposure and assess its potential to be followed up or digged in in terms of news value.
+    For each keyword, carefully analyse its public exposure and look into the related stories. 
+    Then organisedly present the facts, and only facts, that your audience need to know to quickly grasp the idea. 
+    The quirk details/facts in the topic will be even helpful. Especially the strong or out-of-place quotes.
     Remember your audience. No need to explain as you need to explain to amateur. 
 
     ## 2. OUTLIER RADAR (2-3 Items)
     Identify 2-3 specific headlines that are "unusual," "niche," or "out-of-the-ordinary." 
-    Explain why veteran correspondents and experienced editors in this field should look deeper into these.
+    Explain why veteran correspondents and experienced editors in this field should look deeper into these. And quickly provide key quotes in the story that might be helpful for reporters.
 
     # Style
     Authoritative, analytical, and concise. Use professional Markdown headers.
