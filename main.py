@@ -103,10 +103,12 @@ def generate_strategic_brief(all_headlines):
 
     ## 2. OUTLIER RADAR (2-3 Items)
     Identify 2-3 specific headlines that are "unusual," "niche," or "out-of-the-ordinary." 
-    Explain why veteran correspondents and experienced editors in this field should look deeper into these. And quickly provide key quotes in the story that might be helpful for reporters.
+    Then organisedly present the facts, and only facts, that your audience, veteran correspondents and experienced editors, need to know to quickly grasp the idea. 
+    The quirk details/facts in the topic will be even helpful. Especially the strong or out-of-place quotes.
+    Remember your audience. No need to explain as you need to explain to amateur. 
 
     # Style
-    Authoritative, analytical, and concise. Use professional Markdown headers.
+    Authoritative, analytical, and concise. Use professional Markdown headers. Meanwhile, besides the indexed story ID when you mark the reference, you also need to mark the byline and publication everytime.
     """
 
     # 關鍵修改：報告生成加入自動重試 (針對 429 錯誤)
