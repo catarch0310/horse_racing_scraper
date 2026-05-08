@@ -1,6 +1,6 @@
 # Scraper Extractability Report
 
-_Generated: 2026-05-08 06:26:08 UTC_
+_Generated: 2026-05-08 06:49:33 UTC_
 _Environment: GitHub Actions_
 
 Tested 16 scrapers, up to 3 articles each.
@@ -10,10 +10,10 @@ Tested 16 scrapers, up to 3 articles each.
 | Tier | Count | Sources |
 |---|---|---|
 | ✅ Tier A — Full body + quotes (use trafilatura directly) | 6 | `racing_post`, `scmp_racing`, `bloodhorse_news`, `anz_bloodstock`, `ttr_ausnz`, `smh_racing` |
-| 🟡 Tier B — Partial body / lede only (try-fail with fallback) | 3 | `the_straight`, `drf_news`, `equidia_racing` |
-| 🔴 Tier C — Headlines only / blocked | 2 | `singtao_racing`, `daily_telegraph` |
-| 💀 BROKEN — Scraper module failed | 0 | _(none)_ |
-| ⚠️ NO DATA — Scraper returned empty list | 5 | `punters_au`, `racing_com`, `tospo_keiba`, `netkeiba_news`, `racenet_news` |
+| 🟡 Tier B — Partial body / lede only (try-fail with fallback) | 2 | `drf_news`, `equidia_racing` |
+| 🔴 Tier C — Headlines only / blocked | 3 | `singtao_racing`, `the_straight`, `daily_telegraph` |
+| 💀 BROKEN — Scraper module failed | 1 | `racenet_news` |
+| ⚠️ NO DATA — Scraper returned empty list | 4 | `punters_au`, `racing_com`, `tospo_keiba`, `netkeiba_news` |
 
 ---
 
@@ -22,14 +22,9 @@ Tested 16 scrapers, up to 3 articles each.
 ### ✅ Tier A — Full body + quotes (use trafilatura directly)
 
 #### `racing_post`
-- Items found: 61
+- Items found: 60
 - Tested: 3 | Success: 3/3
-- Avg body length: **4676** chars | Avg quotes: **3.7**
-
-✅ _'He's bred to relish this longer trip' - Harry Wilson was in the winners again o_
-  - URL: <https://www.racingpost.com/horse-racing-tips/cracking-the-puzzle/hes-bred-to-relish-this-longer-trip-harry-wilson-was-in-the-winners-again-on-thursday-find-out-his-tips-for-day-three-at-chester-akqTl8u6fenN/>
-  - 5456 chars, 0 quotes
-  - Preview: _'He's bred to relish this longer trip' - Harry Wilson was in the winners again on Thursday, find out his tips for day three at Chester Our tipster provides his fancies for the big races on ITV4 Harry …_
+- Avg body length: **4178** chars | Avg quotes: **4.7**
 
 ✅ _Inside Chester's ground chaos - a stewards' inquiry that 'went round and round i_
   - URL: <https://www.racingpost.com/news/festivals/chester-may-meeting/a-stewards-inquiry-that-went-round-and-round-in-circles-and-a-delay-of-more-than-an-hour-how-chester-ground-saga-played-out-at4Yk8V7XwTN/>
@@ -42,8 +37,17 @@ Tested 16 scrapers, up to 3 articles each.
 
 ✅ _'If there's one horse who could have 10lb in hand it's surely him' - Tom Segal i_
   - URL: <https://www.racingpost.com/horse-racing-tips/premium-tips/pricewise/if-theres-one-horse-who-could-have-10lb-in-hand-its-surely-him-tom-segal-is-keen-on-a-chester-cup-runner-among-his-three-tips-aMHi41d3nRMy/>
-  - 2282 chars, 0 quotes
-  - Preview: _TippingPricewise premium 'If there's one horse who could have 10lb in hand it's surely him' - Tom Segal is keen on a Chester Cup runner among his three tips Racing Post+ tipping is our top-tier bettin…_
+  - 2457 chars, 0 quotes
+  - Preview: _Free Bets Next race unavailable FREE BETS Check out all our Offers on our Free Bets pagesNext race unavailable FREE BETS Check out all our Offers on our Free Bets pages- More TippingPricewise premium …_
+
+✅ _Plumpton forced to cancel Sunday's card after 'highly contagious' equine flu out_
+  - URL: <https://www.racingpost.com/news/britain/plumpton-forced-to-cancel-sundays-card-after-highly-contagious-equine-flu-outbreak-in-nearby-livery-yard-aOENT7X5eWNb/>
+  - 3786 chars, 3 quotes
+  - **Sample quotes**:
+    - `Equine flu is highly contagious and can spread rapidly among horses, including through the air and over a widespread distance, which is why `
+    - `We have also seen a significant recent rise in the number of equine flu outbreaks across the country, in the non-thoroughbred herd. I urge t`
+    - `The health and wellbeing of horses and participants remains our absolute priority, and it is believed this is the most responsible course of`
+  - Preview: _Plumpton forced to cancel Sunday's card after 'highly contagious' equine flu outbreak in nearby livery yard Click here to add us to your Google preferred sources or find out more here Plumpton's meeti…_
 
 #### `scmp_racing`
 - Items found: 7
@@ -191,16 +195,6 @@ Tested 16 scrapers, up to 3 articles each.
 
 ### 🟡 Tier B — Partial body / lede only (try-fail with fallback)
 
-#### `the_straight`
-- Items found: 1
-- Tested: 1 | Success: 1/1
-- Avg body length: **2342** chars | Avg quotes: **0.0**
-
-✅ _‘Serious concerns’ – Tabcorp at centre of AUSTRAC investigation_
-  - URL: <https://thestraight.com.au>
-  - 2342 chars, 0 quotes
-  - Preview: _Home Straight Talk – A $5.6 million Chayan surprise, a tribute to Spirit Of Boom and Tabcorp’s AUSTRAC earthquake Straight Talk looks at the stunning $5.6 million paid for two-year-old Chayan, examine…_
-
 #### `drf_news`
 - Items found: 2
 - Tested: 2 | Success: 1/2
@@ -210,7 +204,7 @@ Tested 16 scrapers, up to 3 articles each.
   - URL: <https://www.drf.com>
   - Error: `trafilatura returned empty`
 
-✅ _Workouts: Woodbine_
+✅ _Workouts: Ajax Downs_
   - URL: <https://www1.drf.com>
   - 2048 chars, 0 quotes
   - Preview: _0 Empty Cart The cart is currently empty. Please add products to your cart before proceeding New to DRF? Everything you could possibly need in one place Register Don't have an account? Register Here P…_
@@ -261,6 +255,14 @@ Tested 16 scrapers, up to 3 articles each.
     - `我一直都低估了『大番薯』， 我沒想過牠今季可贏到四場頭馬，馬兒再次給我驚喜。`
   - Preview: _甜甜小記│廖康銘驚喜浪接浪 更新時間：19:04 2026-05-07 HKT 發佈時間：19:04 2026-05-07 HKT 發佈時間：19:04 2026-05-07 HKT 今季冠軍練馬師之爭認真激烈，剛周三季內最後一次田泥夜賽，最終暫居練馬師榜三甲的廖康銘、方嘉柏及沈集成，分別憑「大番薯」、「滿心星」與「熾烈神駒」各取一W，排名依然無變。另外，十三屆冠軍蔡約翰亦蠢蠢欲動，憑「大利好運」…_
 
+#### `the_straight`
+- Items found: 1
+- Tested: 1 | Success: 0/1
+
+❌ _‘Serious concerns’ – Tabcorp at centre of AUSTRAC investigation_
+  - URL: <https://thestraight.com.au>
+  - Error: `HTTP 429`
+
 #### `daily_telegraph`
 - Items found: 1
 - Tested: 1 | Success: 0/1
@@ -268,6 +270,12 @@ Tested 16 scrapers, up to 3 articles each.
 ❌ _Proper fans, arctic weather: Warrnambool shows racing’s soul_
   - URL: <https://www.dailytelegraph.com.au>
   - Error: `HTTP 403`
+
+
+### 💀 BROKEN — Scraper module failed
+
+#### `racenet_news`
+- ❌ Scraper failed: ModuleNotFoundError: No module named 'cloudscraper'
 
 
 ### ⚠️ NO DATA — Scraper returned empty list
@@ -288,15 +296,12 @@ Tested 16 scrapers, up to 3 articles each.
 - Items found: 0
 - Tested: 0 | Success: 0/0
 
-#### `racenet_news`
-- Items found: 0
-- Tested: 0 | Success: 0/0
-
 
 ---
 
 ## Recommendations
 
 - **Tier A (6 sources)**: Stage 3 pipeline 直接用 trafilatura。
-- **Tier B (3 sources)**: Try-fail 模式；抓到 lede 用 lede，否則回退到標題。
-- **Tier C (2 sources)**: 只有標題可用。對高權威來源（如 Racing Post），保留標題中的引號 fragment 作為 partial quote。
+- **Tier B (2 sources)**: Try-fail 模式；抓到 lede 用 lede，否則回退到標題。
+- **Tier C (3 sources)**: 只有標題可用。對高權威來源（如 Racing Post），保留標題中的引號 fragment 作為 partial quote。
+- **BROKEN (1 sources)**: Scraper 本身有問題，需先修復。
