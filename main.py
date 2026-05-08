@@ -99,7 +99,7 @@ def generate_strategic_brief(all_headlines):
     For each keyword, carefully analyse its public exposure and look into the related stories. 
     Then organisedly present the facts, and only facts, that your audience need to know to quickly grasp the idea. 
     The quirk details/facts in the topic will be even helpful. 
-    And it is followed by a quote section, which includes the exact quotes from the passage - most important ones and the strong or out-of-place ones. And also who said it.
+    And it is followed by a quote section, which includes which people said what. You need to show exact quotes from certain people - most important ones and the strong or out-of-place ones.
     DO NOT TWEAK THE QUOTES.
     Remember your audience. No need to explain as you need to explain to amateur. 
 
@@ -107,12 +107,12 @@ def generate_strategic_brief(all_headlines):
     Identify 2-3 specific headlines that are "unusual," "niche," or "out-of-the-ordinary." 
     Then organisedly present the facts, and only facts, that your audience, veteran correspondents and experienced editors, need to know to quickly grasp the idea. 
     The quirk details/facts in the topic will be even helpful. 
-    And it is followed by a quote section, which includes the exact quotes from the passage - most important ones and the strong or out-of-place ones. And also who said it.
+    And it is followed by a quote section, which includes which people said what. You need to show exact quotes from certain people - most important ones and the strong or out-of-place ones.
     DO NOT TWEAK THE QUOTES.
     Remember your audience. No need to explain as you need to explain to amateur. 
 
     # Style
-    Authoritative, analytical, and concise. Use professional Markdown headers. Meanwhile, besides the indexed story ID when you mark the reference, you also need to mark the byline and publication everytime.
+    Authoritative, analytical, and concise. Use professional Markdown headers. Meanwhile, besides the indexed story ID when you mark the reference, you also need to mark author of the story, and publication everytime.
     """
 
     # 關鍵修改：報告生成加入自動重試 (針對 429 錯誤)
