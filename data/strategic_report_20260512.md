@@ -1,120 +1,141 @@
-As a Strategic Industry Analyst for Idol Horse, I've reviewed the latest global racing headlines. Here's a cross-check analysis of the top strategic keywords and notable outliers for our experienced newsroom.
-
----
+As a Strategic Industry Analyst for Idol Horse, I've reviewed the latest global headlines to identify key trends and emerging narratives for our experienced newsroom.
 
 ## 1. TOP 5 STRATEGIC KEYWORDS
 
-### 1.1 European Classics & Trials Dominance
+### 1.1 Classic Race Contenders & Trials (Global)
+
+The build-up to major Classics, particularly the Derby and French Guineas, is dominating headlines across the UK, France, and the US, with significant attention on Aidan O'Brien's powerful string and the Preakness Stakes field.
 
 **Facts:**
-*   The build-up to the Epsom Derby and French Guineas has been a central theme, with key trials shaping the contenders. Aidan O'Brien and Coolmore continue to be dominant forces, with multiple horses featuring prominently.
-*   O'Brien has nominated main Derby contenders, with a significant decision awaiting regarding Constitution River (ID 1, racing_post).
+*   Aidan O'Brien has nominated main Derby contenders, with a decision pending on Constitution River (ID 1, racing_post).
+*   William Haggas is targeting the Dante Stakes but expresses concern he may have already seen the Derby winner at Chester (ID 4, racing_post).
 *   Coolmore celebrated a "special day" at Chester as Derby hero Lambourn completed a full set at the May meeting under Ryan Moore (ID 11, racing_post).
-*   Aidan O'Brien and Ryan Moore achieved significant success at Chester, with Jan Brueghel bouncing back in the Ormonde Stakes (ID 12, racing_post). Jan Brueghel, who "nearly died" last year, is now being relished for a "proper race" against Calandagan in an Epsom rematch (ID 35, racing_post).
-*   The Classic trials are noted for producing "serious talent," which is seen as crucial for Epsom (ID 16, racing_post).
-*   Diamond Necklace, trained by Aidan O'Brien, sparkled in the French 1,000 Guineas (Poule d'Essai des Pouliches), marking a significant Group 1 victory (ID 44, racing_post; ID 140, ttr_ausnz; ID 174, equidia_racing). This win came 25 years after Rose Gypsy for O'Brien (ID 174, equidia_racing; ID 176, equidia_racing).
-*   Rayif, an Aga Khan speedster, took the French Two Thousand Guineas (ID 98, bloodhorse_news) and is now cut for a Group 1 sprint at Royal Ascot after dominating rivals (ID 45, racing_post).
-*   Confidence is high for Oaks favourite Amelia Earhart, despite her unusual headgear (ID 37, racing_post).
-*   Joseph O'Brien also strengthened his relationship with Ozzie Kheir by training James J Braddock to a G3 Derby Trial win (ID 140, ttr_ausnz).
-*   The Lockinge Stakes is also gaining attention, with Wathnan expressing no trip fears for their contender (ID 7, racing_post) and Aidan O'Brien making a £20,000 supplementary entry (ID 8, racing_post).
+*   Aidan O'Brien and Ryan Moore continued their strong form at Chester, with Jan Brueghel bouncing back in the Ormonde Stakes (ID 12, racing_post).
+*   Diamond Necklace, trained by Aidan O'Brien, won the Group 1 Poule d'Essai des Pouliches (French 1000 Guineas) at ParisLongchamp, 25 years after Rose Gypsy (ID 140, ttr_ausnz; ID 175, equidia_racing; ID 177, equidia_racing).
+*   Rayif, from Aga Khan Studs, secured the French Two Thousand Guineas (ID 98, bloodhorse_news; ID 44, racing_post).
+*   Confidence is high for Oaks favourite Amelia Earhart despite her "unusual headgear combination" (ID 37, racing_post).
+*   In the US, the Preakness Stakes field is shaping up, with Iron Honor as the 9-2 favorite (ID 81, bloodhorse_news), and Silent Tactic scratched, reducing the prospective field to 13 (ID 159, drf_news).
+*   Growth Equity won the Peter Pan Stakes, making a Belmont Stakes run possible (ID 100, bloodhorse_news; ID 105, bloodhorse_news).
+*   Congestus secured a spot in the Japanese Derby (ID 101, bloodhorse_news).
 
-**Quotes:**
-*   "'It wouldn't be a given who Ryan would ride'" - O'Brien (ID 1, racing_post)
-*   "'There's every chance he'll improve a lot'" - Tom Segal (ID 3, racing_post)
-*   "'We think he's just getting faster and faster'" - Wathnan (ID 7, racing_post)
-*   "'She’ll come forward a lot and winning a Group 1 is the aim this season’" (ID 23, racing_post)
-*   "'That's given us the right to be more audacious and she'll probably go for the 1,000 Guineas'" (ID 24, racing_post)
+**Quote Section:**
+*   **Aidan O'Brien (racing_post, ID 1):** "'It wouldn't be a given who Ryan would ride' - O'Brien nominates main Derby contenders as big Constitution River decision awaits"
+*   **William Haggas (racing_post, ID 4):** "William Haggas takes aim at Dante but fears he may have already seen the Derby winner at Chester"
+*   **Coolmore (racing_post, ID 11):** "Coolmore hail 'a special day' as Derby hero Lambourn completes full set at May meeting under inspired Ryan Moore"
+*   **Tom Segal (racing_post, ID 3):** "'There's every chance he'll improve a lot' - Tom Segal has a 25-1 fancy for the Derby"
+*   **Racing Post (ID 14):** "Second guessing Coolmore is a mug’s game for punters - but surely this brilliant trial winner will be given his chance at Epsom"
+*   **Aidan O'Brien (racing_post, ID 35):** "Jan Brueghel 'nearly died' last year - now Aidan O'Brien is relishing prospect of 'proper race' against Calandagan in Epsom rematch"
+*   **Racing Post (ID 37):** "Confidence high for Oaks favourite Amelia Earhart - despite her unusual headgear combination 'not making any sense'"
 
-### 1.2 UK Gambling Regulation & Affordability Checks
+### 1.2 Gambling Regulation & Affordability Checks (UK)
 
-**Facts:**
-*   The debate around affordability checks and broader gambling regulation in the UK continues to be a highly contentious issue with significant industry fallout.
-*   A key DCMS adviser resigned in "disgust" over the plan to roll out affordability checks, calling it "astonishing and unacceptable" (ID 2, racing_post).
-*   Westminster hosted a debate on gambling advertising, characterized by "small attendance, big contradictions" (ID 46, racing_post).
-*   There is a strong sentiment that the Gambling Commission has not resolved crucial issues and ministers should not let them "off the hook" (ID 47, racing_post).
-*   Racing stakeholders are urged to help the government realize that affordability checks "will not do what they're supposed to" (ID 48, racing_post).
-*   Ascot's chief has commented on the situation, indicating a strong stance from racecourses (ID 15, racing_post; ID 41, racing_post).
-*   In Australia, Tabcorp is facing a probe from Austrac, with "a lot on the line for racing" (ID 165, racenet_news).
-
-**Quotes:**
-*   "Astonishing and unacceptable: key DCMS adviser quits in disgust over plan to roll out affordability checks" (ID 2, racing_post)
-*   "Ascot chief: 'This is not the start of a war among racecourses - but it shows our strength of feeling'" (ID 41, racing_post)
-
-### 1.3 Preakness Stakes Build-up
+The ongoing debate around gambling regulation, particularly affordability checks, continues to be a critical and contentious issue impacting the UK racing industry, with key figures expressing strong opposition and concern.
 
 **Facts:**
-*   The second leg of the US Triple Crown, the Preakness Stakes, is a major focus in North American racing news, with continuous updates on entries, favorites, and scratches.
-*   Iron Honor is listed as the 9-2 favorite in the Preakness Stakes (ID 81, bloodhorse_news).
-*   The prospective field for the 2026 Preakness is down to 13 after Silent Tactic was scratched (ID 159, drf_news). Silent Tactic had previously taken a step toward the Preakness with a breeze (ID 125, bloodhorse_news) but was later scratched due to not being "100%" (ID 93, bloodhorse_news).
-*   Other contenders like Incredibolt (ID 91, bloodhorse_news), Napoleon Solo (ID 94, bloodhorse_news), and Chip Honcho (ID 99, bloodhorse_news) are making their final preparations.
-*   Taj Mahal is sparkling in its final tune-up for the 151st Preakness and carries Maryland's hopes (ID 111, bloodhorse_news; ID 128, bloodhorse_news).
-*   Connections are hoping patience pays off with Talkin (ID 92, bloodhorse_news), with trainer Gargan seeking a second Classic win with the horse (ID 112, bloodhorse_news).
-*   Laurel Park, the 2026 Preakness host, is also under review (ID 85, bloodhorse_news).
+*   A key DCMS adviser resigned in disgust over the plan to roll out affordability checks (ID 2, racing_post).
+*   Westminster saw a debate on gambling advertising, highlighting small attendance but "big contradictions" (ID 46, racing_post).
+*   The Gambling Commission is criticized for not resolving crucial issues, with ministers urged not to "let them off the hook" (ID 47, racing_post).
+*   There's a strong sentiment that affordability checks will not achieve their stated purpose, and racing needs to help the government realize this (ID 48, racing_post).
+*   Tabcorp's grand plan faced a "punch-in-the-mouth" moment, with Austrac's probe into the company having significant implications for racing in Australia (ID 130, the_straight; ID 166, daily_telegraph).
 
-**Quotes:**
-*   No direct quotes from individuals were present in the provided headlines for this topic.
+**Quote Section:**
+*   **Racing Post (ID 2):** "Astonishing and unacceptable: key DCMS adviser quits in disgust over plan to roll out affordability checks"
+*   **Racing Post (ID 47):** "The Gambling Commission has not resolved this crucial issue - and ministers must not let them off the hook"
+*   **Racing Post (ID 48):** "It should be obvious that affordability checks will not do what they're supposed to - it is vital racing helps the government realise that"
+*   **Ascot chief (racing_post, ID 41):** "Ascot chief: 'This is not the start of a war among racecourses - but it shows our strength of feeling'"
+*   **McLachlan (the_straight, ID 130):** "McLachlan’s grand plan for Tabcorp has its ‘punch-in-the-mouth’ moment"
 
-### 1.4 Hong Kong Jockey Milestones & Local Racing
+### 1.3 Jockey Milestones & Welfare (HK/Global)
 
-**Facts:**
-*   Hong Kong racing continues to highlight the achievements of its top jockeys and local stable successes.
-*   Zac Purton is rapidly approaching the significant milestone of 2,000 cumulative winners in Hong Kong (ID 56, scmp_racing; ID 68, singtao_racing). He secured another double at Sha Tin, moving within 10 wins of the 2,000 mark (ID 56, scmp_racing; ID 143, ttr_ausnz).
-*   Purton has also taken the reins of two "Romantic" series horses (ID 71, singtao_racing).
-*   Jerry Chau extended his lead in the Tony Cruz Award with a double (ID 55, scmp_racing; ID 143, ttr_ausnz).
-*   Manfred Man landed one of the season's biggest upsets within his double, including Patch Of Stars inflicting Hot Delight’s first defeat to clinch a massive 1,091-1 double (ID 57, scmp_racing; ID 74, singtao_racing; ID 143, ttr_ausnz).
-*   Karis Teetan is also active, taking over a newly won horse from Purton (ID 70, singtao_racing) and riding "Winning Moment" and "Beauty Together" (ID 67, singtao_racing).
-*   "Harbour District" is planning to compete in the Group 3 Ormonde Stakes (ID 61, singtao_racing). This is a notable international entry, as Jan Brueghel also won the Ormonde Stakes at Chester (ID 12, racing_post).
-
-**Quotes:**
-*   No direct quotes from individuals were present in the provided headlines for this topic.
-
-### 1.5 Global Bloodstock Sales & Breeding
+Jockey achievements, particularly Zac Purton's pursuit of 2,000 wins in Hong Kong, are prominent, alongside discussions on jockey welfare and regulatory actions like whip bans.
 
 **Facts:**
-*   The bloodstock market remains active globally, with various sales and updates on first-season sires.
-*   The Arqana Breeze Up Sale saw a Sioux Nation filly top the sale at €1.1 million, despite most metrics being down from the previous year (ID 110, bloodhorse_news; ID 144, ttr_ausnz). Flightline fever also spread to this sale (ID 121, bloodhorse_news).
+*   Zac Purton is nearing 2,000 wins in Hong Kong, moving within 10 wins with a Sha Tin double (ID 56, scmp_racing; ID 68, singtao_racing; ID 143, ttr_ausnz).
+*   Jerry Chau extended his Tony Cruz Award lead with a double (ID 55, scmp_racing; ID 143, ttr_ausnz).
+*   Dylan Browne McMonagle executed the Chester Cup plan perfectly for Joseph O'Brien (ID 10, racing_post).
+*   A jockey received a big whip ban after multiple breaches, including an Aintree ride on a winner given the race after a rival's disqualification (ID 5, racing_post).
+*   The industry is actively addressing jockeys' mental health, with the Racing Post suggesting it "could hardly be doing more" (ID 34, racing_post).
+*   Harry Cobden made his first trip to Ireland's most scenic racecourse for a ride for JP McManus (ID 38, racing_post).
+*   A jockey returning from America noted the trickiness of the local scene but declared, "I'm not here to fart about" (ID 39, racing_post).
+
+**Quote Section:**
+*   **Racing Post (ID 5):** "Big whip ban for jockey after multiple breaches - including Aintree ride on winner given race after rival's disqualification"
+*   **Racing Post (ID 34):** "Is racing doing enough to support jockeys' mental health? The reality is it could hardly be doing more"
+*   **Dylan Browne McMonagle (racing_post, ID 10):** "'It was just perfect' - Dylan Browne McMonagle executes Chester Cup plan to perfection for Joseph O'Brien"
+*   **Jockey (racing_post, ID 39):** "'I was riding against the best in America, now I've come back and it's tricky - but I'm not here to fart about'"
+*   **Harry Cobden (racing_post, ID 38):** "'I've seen a few pictures' - Harry Cobden makes first trip to Ireland's most scenic racecourse for one ride for JP McManus"
+
+### 1.4 Breeding & Sales Market Activity (Global)
+
+The global breeding and sales market remains active, with significant transactions at breeze-up sales, the emergence of first-crop winners for new sires, and catalog releases for upcoming sales.
+
+**Facts:**
+*   A Sioux Nation filly topped the Arqana Breeze Up Sale for €1.1 million, though most metrics were down from the previous year (ID 110, bloodhorse_news; ID 144, ttr_ausnz).
+*   Flightline fever spread to the Arqana Breeze Up Sale (ID 121, bloodhorse_news).
 *   NZB released its catalog for the National Weanling Sale (ID 83, bloodhorse_news).
-*   Inglis Digital Australia Sale is headlined by a Godolphin draft (ID 118, bloodhorse_news). Shinzo is on speed dial for the Inglis Foal Sale (ID 132, anz_bloodstock).
-*   First winners for new sires are emerging: Highly Motivated sired its first winner in Mexico (ID 82, bloodhorse_news), Hot Rod Charlie's first winner captured its debut in Japan (ID 90, bloodhorse_news), and Filly Rhythm of Crown scored the first for Jack Christopher (ID 89, bloodhorse_news).
-*   The first two Rich Strike foals were born on April 27 in New York (ID 84, bloodhorse_news).
-*   Home Affairs, a Golden Slipper-winning and exciting young Coolmore Stud stallion, had its first winner, Home Tomurra, bred by Torryburn Stud (ID 138, ttr_ausnz).
+*   Godolphin's draft headlined the Inglis Digital Australia Sale (ID 118, bloodhorse_news).
+*   Highly Motivated sired his first winner in Mexico (ID 82, bloodhorse_news).
+*   The first two Rich Strike foals were born in New York (ID 84, bloodhorse_news).
+*   Filly Rhythm of Crown scored the first win for Jack Christopher (ID 89, bloodhorse_news).
+*   Hot Rod Charlie's first winner captured a debut in Japan (ID 90, bloodhorse_news).
+*   Home Tomurra became the first winner by Home Affairs, bred by Torryburn Stud (ID 138, ttr_ausnz).
 *   A Group 1-winning son of champion sire Into Mischief is set to make his way Down Under (ID 134, anz_bloodstock).
-*   Windsor Park announced its roster for 2026, featuring "European quality" (ID 147, ttr_ausnz).
+*   BC winner Starlust is back in training after a year at stud (ID 119, bloodhorse_news).
 
-**Quotes:**
-*   No direct quotes from individuals were present in the provided headlines for this topic.
+**Quote Section:**
+*   **TTR AusNZ (ID 144):** "It was the Sioux Nation filly offered by Roderic Kavanagh that sold for €1.1 million, which was the highlight of the 2026 Arqana Breeze-Up Sale. While most metrics were down from the corresponding sale last year."
+*   **TTR AusNZ (ID 138):** "Torryburn Stud’s famous heart brand was carried to victory on Sunday at the Sunshine Coast when Home Tomurra became the first winner by Home Affairs bred by the farm that produced the Golden Slipper-winning and very exciting young Coolmore Stud stallion."
+*   **TTR AusNZ (ID 141):** "From a significant financial gamble in Kentucky to becoming one of the hottest young families in the Australian Stud Book, Ms Bad Behavior continues to deliver in the sale ring and on the racetrack - and now St Gotthard has added another chapter to her already remarkable and ever-growing story."
+*   **NZB (bloodhorse_news, ID 83):** "NZB Releases Catalog for National Weanling Sale"
 
----
+### 1.5 Racecourse Operations & Industry Governance
+
+Operational challenges, including ground conditions, cancellations, and broader governance issues like the Ascot dispute and equine health advisories, are impacting the smooth running and strategic direction of racing.
+
+**Facts:**
+*   Chester experienced "ground chaos," leading to a stewards' inquiry that "went round and round in circles" and a delay of over an hour (ID 13, racing_post).
+*   The next two Brighton meetings were cancelled due to the "curse of leatherjackets" plaguing the seaside course (ID 18, racing_post).
+*   Ascot has "gone rogue once more," leading to a "reckoning" for racing, with its chief stating this is not a "war among racecourses" but shows "strength of feeling" (ID 15, racing_post; ID 41, racing_post).
+*   HISA issued an Equine Health Advisory on Vets' List (ID 122, bloodhorse_news).
+*   There's a rise in equine influenza cases in Britain, prompting a "what you need to know" guide (ID 19, racing_post).
+*   Racing Queensland's new Racing Institute aims to offer a "one-stop shop" for workforce training, addressing a "big hole to fill" in recruitment and advancement (ID 142, ttr_ausnz).
+
+**Quote Section:**
+*   **Racing Post (ID 13):** "Inside Chester's ground chaos - a stewards' inquiry that 'went round and round in circles' and a delay of more than an hour"
+*   **Racing Post (ID 18):** "Next two Brighton meetings cancelled as curse of leatherjackets continues to plague seaside course"
+*   **Racing Post (ID 15):** "Chaos, compromise or change? Ascot has gone rogue once more - now racing faces its reckoning"
+*   **Ascot chief (racing_post, ID 41):** "'This is not the start of a war among racecourses - but it shows our strength of feeling'"
+*   **TTR AusNZ (ID 142):** "The industry's shrinking offerings for recruitment and advancement leave it with a big hole to fill."
 
 ## 2. OUTLIER RADAR
 
 ### 2.1 Brighton's Leatherjacket Curse
 
 **Facts:**
-*   The Brighton racecourse has cancelled its next two meetings due to an ongoing issue with "leatherjackets" (ID 18, racing_post).
-*   This is described as a "curse" plaguing the seaside course, indicating a persistent and unusual problem affecting racing operations. Leatherjackets are the larvae of crane flies, known for damaging turf by feeding on roots.
+*   Brighton Racecourse has cancelled its next two scheduled meetings.
+*   The reason cited is a continuing problem with "leatherjackets," which are the larvae of crane flies.
+*   The headline refers to this persistent issue as a "curse" plaguing the seaside course.
 
-**Quotes:**
-*   No direct quotes from individuals were present in the provided headline for this topic.
+**Quote Section:**
+*   **Racing Post (ID 18):** "Next two Brighton meetings cancelled as curse of leatherjackets continues to plague seaside course"
 
-### 2.2 Jockey's Non-Racing Athletic Endeavor
-
-**Facts:**
-*   Hong Kong apprentice jockey Ellis Wong, along with his girlfriend, successfully completed a Hyrox fitness endurance race (ID 66, singtao_racing).
-*   Hyrox is a global fitness race that combines running with functional workout stations, highlighting a significant athletic pursuit outside of professional race riding. This offers a glimpse into the personal fitness regimes and interests of jockeys beyond their track performance.
-
-**Quotes:**
-*   No direct quotes from individuals were present in the provided headline for this topic.
-
-### 2.3 The Racing Post's Genesis and Unforgettable Stories
+### 2.2 Jockey's Non-Racing Fitness Challenge
 
 **Facts:**
-*   The Racing Post, a prominent publication in the industry, has been reflecting on its own history and significant moments, including its founding and memorable stories.
-*   An "extraordinary inside story" details the birth of the Racing Post, described as "the start of a revolution" (ID 28, racing_post).
-*   The publication also shared "the most unforgettable stories in Racing Post history," as chosen by its editors (ID 27, racing_post).
-*   The Racing Post introduced its first-ever Newmarket correspondent, whose role served as a launchpad for an "astonishing career" (ID 26, racing_post).
-*   A feature also explored what keeps the Racing Post "number one" after 40 years of horseracing expertise (ID 29, racing_post).
+*   Hong Kong jockey Alfred Chan (鍾易禮) successfully completed a Hyrox fitness endurance challenge.
+*   He participated alongside his girlfriend.
+*   Hyrox is a global fitness race that combines running with functional workout stations.
 
-**Quotes:**
-*   "'I had to sit in my office because I had tears in my eyes'" - (chosen by the editors as one of the most unforgettable stories) (ID 27, racing_post)
-*   "'This was the start of a revolution'" - (describing the Racing Post's birth) (ID 28, racing_post)
+**Quote Section:**
+*   **Sing Tao Racing (ID 66):** "鍾易禮偕女友挑戰Hyrox體能耐力賽成功 (Alfred Chan and girlfriend successfully complete Hyrox fitness endurance challenge)"
+
+### 2.3 Personal Confession from a Racing Figure
+
+**Facts:**
+*   A racing figure recounted a highly embarrassing personal incident that occurred during a television appearance.
+*   The incident was deemed so "stupid, so ridiculous, so embarrassing" that it was not broadcast.
+*   The individual believed Chris Tarrant, the TV presenter, must have considered them a "prize idiot."
+*   This headline is part of a series celebrating the Racing Post's history, focusing on unforgettable stories.
+
+**Quote Section:**
+*   **Racing Post (ID 25):** "'I did something so stupid, so ridiculous, so embarrassing that they couldn't possibly broadcast it - Chris Tarrant must have thought I was a prize idiot'"
