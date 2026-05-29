@@ -4,143 +4,128 @@ As a Strategic Industry Analyst for Idol Horse, I've reviewed the latest global 
 
 ## 1. TOP 5 STRATEGIC KEYWORDS
 
-### 1.1 Jockey Spotlight: Milestones, Injuries & Integrity
+### 1. European Classic & Royal Ascot Contenders
 
 **Facts:**
-*   Hong Kong jockey Zac Purton is actively pursuing his 2,000th career win, with 8 chances recently highlighted to achieve this historic milestone [2, 3] (SCMP Racing).
-*   Purton's pursuit is intertwined with the championship race, as trainer David Fownes reclaimed the lead while Purton awaited his record [2] (SCMP Racing).
-*   His impact is also seen in horse changes, with "Triple Treasure Wealth" switching to Purton in a full bid for a win [21] (Sing Tao Racing).
-*   UK jockey Holly Doyle suffered a bone fracture after a fall and is scheduled for surgery next Tuesday to implant a steel plate [8] (Sing Tao Racing).
-*   Karis Teetan secured wins with "Swift Foot" and "Swift Pace" in Hong Kong [11, 26] (Sing Tao Racing).
-*   Joao Moreira, referred to as "God of Thunder," scored a treble with "Lucky Happy" [13] (Sing Tao Racing).
-*   Hong Kong jockey Keith Yeung was found guilty on three charges, with sentencing scheduled for next month [23] (Sing Tao Racing).
-*   Jockey Berrios was named Jockey of the Week after a Gamely victory [42] (Bloodhorse News).
-*   Jockey Camacho is making the most of a new opportunity [45] (Bloodhorse News).
-*   Veteran jockey Hernandez rode his 3,000th career winner [74] (Bloodhorse News).
-*   Classic-winning jockey Ives passed away at age 74 [55] (Bloodhorse News).
-*   Jockey Andrea Atzeni is eyeing a Group Three double on "Sky Jewellery" and "Crimson Flash" [5] (SCMP Racing).
-*   Jockey Hewitson combined with championship-leading trainer Shum at Happy Valley [4] (SCMP Racing).
+*   The French Derby (Prix du Jockey Club) is a significant focus, with Aidan O'Brien's Constitution River facing concerns over a high draw (ID 4, racing_post) and the challenge highlighted by draw statistics (ID 11, racing_post).
+*   Donnacha O'Brien is also targeting the French Derby with a colt he considers "as good as I've had" (ID 42, racing_post).
+*   John Gosden's Ombudsman secured a Sandown win, setting up a Royal Ascot clash with Daryz (ID 1, racing_post).
+*   Francis Graffard, trainer of Daryz's half-brother, is content to fly "under the radar" ahead of a potential Royal Ascot showdown (ID 46, racing_post).
+*   John and Thady Gosden supplemented a Group winner for the Prix du Jockey Club at a cost of €72,000 (ID 48, racing_post).
+*   Talk Of New York's Heron victory saw his odds cut for the St James's Palace Stakes at Royal Ascot (ID 6, racing_post).
+*   Constitution Hill is being considered for a Classic win at the Irish Champions Festival (ID 19, racing_post).
+*   Ralph Beckett is pondering his team for the Epsom Classics, hoping to reverse Chester form (ID 20, racing_post).
+*   Michael Bell is considering the Commonwealth Cup for a filly, though another race is her "principal target" (ID 35, racing_post).
+*   Aussie raiders are tuning up for Royal Ascot glory (ID 167, racenet_news).
+*   The French Derby has 19 horses entered, with "Industrial Metropolis" added in second stage entries (ID 65, singtao_racing).
+*   The Qatar Prix du Jockey Club participants have been announced (ID 184, equidia_racing).
 
 **Quotes:**
-*   No direct quotes from individuals available in headlines regarding Purton's milestone, Doyle's injury, or Yeung's charges.
-*   "Alexandre Abrivard: « Je crois en Inexess Bleu dans l’Elitlopp »" [124] (Equidia Racing)
+*   John Gosden (racing_post): "It's what the game is about" (ID 1)
+*   Aidan O'Brien (racing_post): "Ryan will have to make a lot of quick decisions" (ID 4)
+*   Donnacha O'Brien (racing_post): "He's as good a colt as I've had" (ID 42)
+*   Francis Graffard (racing_post): "The others can have all the spotlight" (ID 46)
+*   Michael Bell (racing_post): "We’ll leave her in the Commonwealth Cup and see how that’s shaping up - but this race is her principal target" (ID 35)
+*   Ralph Beckett (racing_post): "It's not beyond the realms of possibility" (ID 20)
+*   Trainer Haruki Sugiyama (tospo_keiba): "That is this horse's strength." (ID 84, regarding Lobuchen's gate draw in the Japan Derby)
 
-### 1.2 Global Bloodstock Market Activity
+### 2. UK Gambling Regulation & Affordability Checks
 
 **Facts:**
-*   The Magic Millions Gold Coast National Broodmare Sale was a significant event, with five-time Group 1 winner Legarto selling for $2.8 million, reigning supreme as the top lot [57, 71, 92, 94] (Bloodhorse News, TTR AusNZ).
-*   The sale saw strong competition for sought-after offerings, despite a decrease in million-dollar mares compared to the previous year, with valuable pregnancies to Extreme Choice being a highlight [88, 89] (TTR AusNZ).
-*   Yulong secured young Hellbent mare Miss Hellfire in foal to Extreme Choice for $2.05 million on her maiden cover [88] (TTR AusNZ).
-*   The market showed a strong appetite for racing talent coming off the track, leading to a soaring clearance rate [92] (TTR AusNZ).
-*   Figtree Thoroughbreds and Neil Jenkinson (FBAA) secured Satin Shimmer for $55,000, identified as an outstanding value buy [91] (TTR AusNZ).
-*   Kingstar Farm secured the classy mare Overriding for $90,000 as a value buy [95] (TTR AusNZ).
-*   The Inglis Digital May (Late) Sale concluded with 276 lots sold, highlighted by multiple Grade I winner In Italian's half-sister Fiorenza, purchased by Arrowfield Stud, and Group 2-winning West Of Swindon, bought by Pure Bloodstock [36, 87] (Bloodhorse News, TTR AusNZ).
-*   Magic Millions offered fewer weanlings and turned over less money in 2026, but the market showed a cooled top end, a firmer floor, and reshaping by cost, caution, and digital alternatives [86] (TTR AusNZ).
-*   Juddmonte's Oasis Dream has been pensioned from stud duty [38] (Bloodhorse News).
-*   The JRHA unveiled its Select Sale Catalog [76] (Bloodhorse News).
-*   Shinzo is on speed dial for the Inglis Foal Sale [81] (ANZ Bloodstock).
-*   A Group 1-winning son of champion sire Into Mischief is set to make his way Down Under [83] (ANZ Bloodstock).
-*   Classic winners are helping Starspangledbanner shine bright [52] (Bloodhorse News).
+*   The UK government is perceived to be avoiding responsibility regarding the ongoing uncertainty over affordability checks (ID 22, racing_post).
+*   The Gambling Commission has delayed its decision on affordability checks, citing a need for more time to assess evidence (ID 23, racing_post).
+*   Concerns are significant regarding the pilot program for affordability checks, described as having "glacial progress, substantial problems and no evaluation" (ID 25, racing_post).
+*   The case against affordability checks is presented as "unanswerable" (ID 24, racing_post).
+*   The regulator is reportedly struggling to control the expanding black market and social media advertising (ID 49, racing_post).
+*   A Westminster debate on gambling advertising was characterized by "small attendance, big contradictions" (ID 51, racing_post).
+*   Flutter's savings are contrasted with racing's "big loss" in a financial analysis (ID 123, bloodhorse_news).
 
 **Quotes:**
-*   No direct quotes available in headlines.
+*   No direct quotes from individuals were available in the provided headlines for this theme.
 
-### 1.3 Hong Kong Racing Championship & Key Players
+### 3. Bloodstock Sales & Market Dynamics
 
 **Facts:**
-*   Trainer David Fownes reclaimed the championship lead, while jockey Zac Purton was made to wait for his 2,000th win [2] (SCMP Racing).
-*   Trainer Size is eyeing a Group Three double with "Sky Jewellery" and "Raging Blizzard" [1] (SCMP Racing).
-*   Trainer Shum is the championship-leading trainer, combining with jockey Hewitson at Happy Valley [4] (SCMP Racing).
-*   Trainer David Richards awaits the return of "La Forza" as he looks to maintain hot form [6] (SCMP Racing).
-*   Trainer Tony Cruz (曾炳威) is looking to build on momentum [25] (Sing Tao Racing).
-*   Ricky Yiu's (王永強) new star "Bullish New Star" is set to debut [27] (Sing Tao Racing).
-*   "Golden Sixty" is showing different facets [22] (Sing Tao Racing).
-*   "Armor Golden Eagle" is tipped as a best bet to soar at Happy Valley and later won the Sutton Cup [7, 16] (SCMP Racing, Sing Tao Racing).
-*   Other notable Hong Kong winners include "Little Big Boss" (maiden win at Happy Valley), "Swift Foot", "Gentleman", "Self-Strengthening", "Lucky Happy" (Moreira treble), "Glamorous Life" (Frankie Lor double), "Sunny Self-Strength" (hot favourite), "Great Thousand Ambition" (venue change win), "Swift Pace" (maiden HK win), and "Instinct" (opened winning account) [10-14, 16-20] (Sing Tao Racing).
+*   The Magic Millions Gold Coast National Broodmare Sale saw a strong market for racing talent, with the clearance rate soaring past the previous year's figures (ID 150, ttr_ausnz).
+*   Five-time Group 1 winner Legarto was the star of the Magic Millions sale, selling for $2.8 million (ID 150, 152, ttr_ausnz; ID 115, 129, bloodhorse_news).
+*   The top end of the broodmare market remained strong, though the number of million-dollar mares was down from last year (ID 147, ttr_ausnz).
+*   Valuable pregnancies to Extreme Choice were highly sought after, with Yulong securing a Hellbent mare in foal to him for $2.05 million (ID 146, ttr_ausnz).
+*   The Inglis Digital May (Late) Sale was highlighted by the sale of multiple Grade I winner In Italian's half-sister Fiorenza to Arrowfield Stud, and Group 2-winning West Of Swindon to Pure Bloodstock (ID 145, ttr_ausnz; ID 94, bloodhorse_news).
+*   Tattersalls Ireland saw Talented Dan De Champ sell for a record €210,000 (ID 9, racing_post).
+*   Magic Millions offered fewer weanlings and turned over less money in 2026, indicating a cooled top end, a firmer floor, and a market reshaped by cost, caution, and digital alternatives (ID 144, ttr_ausnz).
+*   Figtree Thoroughbreds and Neil Jenkinson secured Satin Shimmer for $55,000, identified as an "outstanding value buy" (ID 149, ttr_ausnz).
+*   Kingstar Farm secured mare Overriding for $90,000, noted as a "Value Buy" (ID 153, ttr_ausnz).
+*   The JRHA has unveiled its Select Sale Catalog (ID 134, bloodhorse_news).
 
 **Quotes:**
-*   No direct quotes available in headlines.
+*   No direct quotes from individuals were available in the provided headlines for this theme.
 
-### 1.4 International Feature Race Circuit
+### 4. Integrity & Regulatory Scrutiny
 
 **Facts:**
-*   19 horses have been entered for the French Derby, with "Urban Float" added in the second stage entries [9] (Sing Tao Racing).
-*   A prep race for the Durban July Handicap is scheduled for Saturday [24] (Sing Tao Racing).
-*   The Belmont Stakes may see a powershift, with "Chip Honcho" and "Potente" confirmed not to race [29, 47] (Bloodhorse News).
-*   "Ombudsman" was determined in its Brigadier Gerard victory and was considered the one to beat [30, 44] (Bloodhorse News).
-*   "Jimmysstar" is favored in the Kingsford Smith Cup [32] (Bloodhorse News).
-*   "The Goat" and "Stronghold" lead a short Triple Bend field [33] (Bloodhorse News).
-*   The Blame Stakes is anticipated, with "Vibe" testing "Rattle N Roll" and "Hit Show" [35, 62] (Bloodhorse News).
-*   "Casse Duo" and "Jokestar" are set to clash in the Eclipse Stakes [37] (Bloodhorse News).
-*   "Seismic Beauty" is looking for a second Santa Margarita win [41] (Bloodhorse News).
-*   A pair of Breeders' Cup winners are entered for the Shawnee [49] (Bloodhorse News).
-*   Bob Baffert entered the Aristides with a one-two punch [53] (Bloodhorse News).
-*   "Heroic Move" rallied to capture the Steve Sexton Mile and is eyeing the Cornhusker Handicap [66, 107] (Bloodhorse News, DRF News).
-*   "Formidable Man" proved much the best in the Shoemaker Mile [67] (Bloodhorse News).
-*   "Forged Steel" dominated the Hollywood Gold Cup [68] (Bloodhorse News).
-*   "Thought Process" was crowned with a Grade 1 in the Gamely [69] (Bloodhorse News).
-*   "Usha" held on to take the Winning Colors [70] (Bloodhorse News).
-*   "Alpyland," a two-time stakes winner, is targeting the Penn Mile [63] (Bloodhorse News).
-*   Solid Kiwi fillies are bidding for Gold in the Queensland Derby, with Kiwi trainers having a "Solid Gold" shot at history [79, 108] (ANZ Bloodstock, Racenet News).
-*   Mitchell Freedman has the G1 JJ Atkins Plate in mind for debutant winner "Farmelia" [90] (TTR AusNZ).
-*   The Qatar Prix du Jockey Club runners were announced for Sunday at Chantilly [126] (Equidia Racing).
-*   The Elitlopp at Solvalla is also a focus, with jockey Alexandre Abrivard expressing confidence in "Inexess Bleu" [124] (Equidia Racing).
-*   French Quinté+ races are a daily focus, with analyses, predictions, and results for Vincennes and ParisLongchamp [115-123, 125, 127-132] (Equidia Racing).
+*   An "extraordinary row" over pre-race checks has escalated, with the Irish trainers' body calling for a full investigation into the IHRB vet team (ID 7, racing_post).
+*   The IHRB has come under fire specifically for pre-race checks before the Irish 1,000 Guineas (ID 8, racing_post).
+*   Philip Byrnes was banned for 21 days, and his father Charles's winner was disqualified at Limerick after badly impeding a rival and causing another to be carried out (ID 3, racing_post).
+*   Peter and Mickey Bowen received a £5,000 fine, and a Grade 2 winner was disqualified due to prohibited substance breaches (ID 37, racing_post).
+*   Research arrived too late for horse trainers fined over a banned substance (ID 164, smh_racing).
+*   HIWU (Horse Racing Integrity and Welfare Unit) issued an advisory on several herbal products (ID 104, bloodhorse_news).
+*   A study indicates that stall contamination can affect Metformin positives (ID 112, bloodhorse_news).
+*   Keith Yeung was found guilty on three charges, with sentencing scheduled for next month (ID 79, singtao_racing).
 
 **Quotes:**
-*   "Alexandre Abrivard: « Je crois en Inexess Bleu dans l’Elitlopp »" [124] (Equidia Racing)
-*   "'Over the odds': Winx owner eyes yet another Group 1" [110] (Racenet News)
+*   No direct quotes from individuals were available in the provided headlines for this theme.
 
-### 1.5 Industry Governance & Horse Welfare
+### 5. Hong Kong Racing Dynamics
 
 **Facts:**
-*   The UK Equine sector secured USDA funding for horse health studies [40] (Bloodhorse News).
-*   The Horseracing Integrity and Welfare Unit (HIWU) issued an advisory on a number of herbal products, indicating a focus on substance regulation [46] (Bloodhorse News).
-*   A study found that stall contamination affects Metformin positives, highlighting a challenge in drug testing and environmental factors [54] (Bloodhorse News).
-*   The Jockey Club promoted Werner to Vice President [64] (Bloodhorse News).
-*   A bonus will benefit horsemen who support the Belmont Fall Meet [58] (Bloodhorse News).
-*   Rockridge Stud is running a foal name contest to benefit the Thoroughbred Aftercare Alliance (TAA) [59] (Bloodhorse News).
-*   Horsemen are supporting the Thoroughbred Retirement Foundation [60] (Bloodhorse News).
-*   The Australian Turf Club (ATC) is standing firm on its argument against administration, asserting "separation not subordination" [78] (The Straight).
-*   In-race wagering is providing U.S. tracks with added revenue [34] (Bloodhorse News).
-*   "Dollars & Sense" reported on Flutter's savings and racing's big loss [65] (Bloodhorse News).
-*   Hawthorne won the right to quiz Fairmount Park under oath [51] (Bloodhorse News).
-*   Trainers were fined over a banned substance, with research arriving a day late [106] (SMH Racing).
+*   Casper Fownes has reclaimed the championship lead (ID 58, scmp_racing; ID 81, singtao_racing).
+*   Zac Purton is poised to make history, with 8 chances to reach 2,000 wins (ID 59, scmp_racing), though he was made to wait for the milestone (ID 58, scmp_racing).
+*   Trainer Size is eyeing a Group Three double with Sky Jewellery and Raging Blizzard (ID 57, scmp_racing).
+*   Atzeni is also targeting a Group Three double on Sky Jewellery and Crimson Flash (ID 61, scmp_racing).
+*   Hewitson is combining with championship-leading trainer Shum at Happy Valley (ID 60, scmp_racing).
+*   Karis Teetan's "Swift Foot" took the lead (ID 67, singtao_racing), and "Swift Foot Gallop" secured its first win in Hong Kong (ID 75, singtao_racing; ID 82, singtao_racing).
+*   "Little Tyrant" secured its first win at Happy Valley (ID 66, singtao_racing).
+*   "Lucky Happy" and "Magic Man" (Moreira) scored a treble (ID 69, singtao_racing).
+*   "Splendid Life" helped Fownes' stable score a double (ID 70, singtao_racing).
+*   "Armor Golden Eagle" won the Sutton Cup (ID 72, singtao_racing) and is a "Best Bet" at Happy Valley (ID 63, scmp_racing).
+*   "Bright Day Self-Reliance" won as a hot favourite (ID 73, singtao_racing).
+*   "Great Thousands Ambition" won after switching tracks (ID 74, singtao_racing).
+*   "Instinct" opened its winning account in Hong Kong (ID 76, singtao_racing).
+*   "Three Treasures Bringing Wealth" changed to Purton, aiming for a strong win (ID 77, singtao_racing).
+*   "Golden Sixty" is showing different facets (ID 78, singtao_racing).
+*   Wang Yongqiang's new rising star "Bullish New Star" debuted (ID 83, singtao_racing).
 
 **Quotes:**
-*   ATC's stance: "Separation not subordination" [78] (The Straight)
-*   No other direct quotes available in headlines.
+*   No direct quotes from individuals were available in the provided headlines for this theme.
 
 ---
 
 ## 2. OUTLIER RADAR
 
-### 2.1 Celebrity Sighting: Arsenal Legend Thierry Henry at the Races
+### 1. Jockey's Dramatic Return from Coma and Prison
 
 **Facts:**
-*   Arsenal football legend Thierry Henry was reported to have attended the races in Hong Kong [15] (Sing Tao Racing).
-*   This is a human-interest story, highlighting the crossover appeal of horse racing to figures outside the sport.
-*   The headline appeared in a "Racetrack Profile" section, suggesting it's a regular feature on notable attendees or quirky observations.
+*   A jockey has made a return to the winner's enclosure following a period that included a coma and a prison sentence (ID 2, racing_post).
+*   The headline highlights the jockey's remorse upon their return (ID 2, racing_post).
 
 **Quotes:**
-*   No direct quote available in headlines.
+*   Remorseful jockey (racing_post): "You can't be more sorry than I am" (ID 2)
 
-### 2.2 Inter-Track Legal Dispute: Hawthorne vs. Fairmount Park
+### 2. Gender Inequality in Jockey Opportunities
 
 **Facts:**
-*   Hawthorne Race Course won the right to quiz Fairmount Park (now FanDuel Sportsbook and Horse Racing) under oath [51] (Bloodhorse News).
-*   This indicates a legal dispute between two racing venues in the United States.
-*   The specific nature of the dispute is not detailed in the headline but suggests a significant legal proceeding requiring sworn testimony.
+*   Female jockey Charlotte Jones, after riding five consecutive winners, questioned the disparity in opportunities for female riders compared to male counterparts (ID 43, racing_post).
+*   Jones retired after riding a winner at Cartmel, stating a desire to "go out while I'm still wanted than fade away" (ID 18, racing_post).
 
 **Quotes:**
-*   No direct quote available in headlines.
+*   Charlotte Jones (racing_post): "Five winners in a row and I don't pick up an outside ride - if I was a boy, would that be different?" (ID 43)
+*   Charlotte Jones (racing_post): "I'd rather go out while I'm still wanted than fade away" (ID 18)
 
-### 2.3 Major Club's Autonomy Battle: ATC Stands Firm Against Administration
+### 3. JRA's Heat Countermeasure: Reducing Race Numbers
 
 **Facts:**
-*   The Australian Turf Club (ATC) has taken a strong stance against potential administration, asserting its position as "separation not subordination" [78] (The Straight).
-*   This headline signals a significant governance battle within Australian racing, where a major club is resisting external control or oversight.
-*   The phrasing "stands firm" indicates a resolute and potentially protracted conflict over autonomy.
+*   The Japan Racing Association (JRA) is considering a significant reduction in the number of daily races for next summer's meetings (ID 85, netkeiba_news).
+*   The proposal involves cutting the traditional 12 races per day down to 7 as a countermeasure against extreme heat (ID 85, netkeiba_news).
 
 **Quotes:**
-*   ATC's stance: "Separation not subordination" [78] (The Straight)
+*   No direct quotes from individuals were available in the provided headlines for this theme.
